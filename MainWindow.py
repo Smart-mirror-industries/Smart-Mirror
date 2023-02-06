@@ -9,11 +9,12 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        #title
         self.setWindowTitle("Smart Mirror")
-        button = QPushButton("Press Me!")
+
+        #style sheet
+        self.setStyleSheet("background-color: black;")
+
 
         #set window size
-        self.setFixedSize(QSize(400, 300))
-
-        # Set the central widget of the Window.
-        self.setCentralWidget(button)
+        self.showMaximized()
