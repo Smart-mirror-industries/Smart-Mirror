@@ -18,6 +18,11 @@ def Latlon(zpcode):
 #Now for the weather, maybe eventually
 def weathergrab(lat, lon):
     #bazinga
+    weather= f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
+   #call
+    response = requests.get(weather)
+    data = weather.josn()
+    
     return
     
 
