@@ -1,6 +1,7 @@
 import requests
+import math
 
-#This will be how the system gathers weather data
+#This will be how the system gathers weather data, i haven't read into the GUI much, so into the terminal it goes
 
 #Just grab zipcode first
 def Latlon(zpcode):
@@ -11,6 +12,7 @@ def Latlon(zpcode):
     data = response.json()#Reading the JSON
     lat = data[0]['lat'] #grabbing ze data
     lon = data[0]['lon']
+
     return lat, lon
 
 #Now for the weather, maybe eventually
@@ -19,7 +21,7 @@ def weathergrab(lat, lon):
     return
     
 
-zipcode = input("Input your zipcode:" ) #I didn't know you could shorthand this
+zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
 
 lat, lon = Latlon(zipcode)
 
