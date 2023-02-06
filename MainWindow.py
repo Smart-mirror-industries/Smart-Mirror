@@ -14,7 +14,3 @@ class MainWindow(QMainWindow):
 
         #style sheet
         self.setStyleSheet("background-color: black;")
-
-
-        #set window size
-        self.showMaximized()
