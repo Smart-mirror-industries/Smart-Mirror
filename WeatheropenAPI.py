@@ -1,11 +1,10 @@
 import requests
 import math
 import time 
+import datetime
+import json
 
 #This will be how the system gathers weather data, i haven't read into the GUI much, so into the terminal it goes
-day1
-day2
-day3
 #Just grab zipcode first
 def Latlon(zpcode):
     print("Zipcode: " +zpcode) #Why in the everloving EARTH do I have to define it like this first.
@@ -20,13 +19,16 @@ def Latlon(zpcode):
 #Now for the weather, maybe eventually
 def weathergrab(lat, lon):
     #bazinga
-    weather= f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
-   #call
+    weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
+   #call complete ring ring ring
     response = requests.get(weather)
-    data = weather.josn()
-
-
-    return
+    data = response.json()
+    date1 = data['daily'][0]['dt']
+    readdate = datetime.datetime.fromtimestamp(date1).strftime('%Y-%m-%d')
+    low1 = data['daily'][0]['temp']['min']
+    high1 = data['daily'][0]['temp']['max'] #I think this is right?
+    #descrip = data['daily'][0]['weather']['0']
+    return readdate, low1, high1
     
 
 zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
@@ -35,4 +37,6 @@ lat, lon = Latlon(zipcode)
 
 print(f"Lat: {lat}, Lon: {lon}")
 
-weathergrab(lat, lon)
+date1, low1, high1 = weathergrab(lat, lon)
+
+print(f"Current date: {date1}, Low today: {low1} High today: {high1}")
