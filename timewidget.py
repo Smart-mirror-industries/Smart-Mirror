@@ -11,18 +11,11 @@ class CurrentTimeAndDate(QtWidgets.QWidget):
         # Set the current date and time
         current_date = datetime.now().strftime("%B %d, %Y")
         current_time = datetime.now().strftime("%I:%M%p").lower()
-        self.label = QtWidgets.QLabel("It is {} and the current time is: {}".format(current_date, current_time))
-        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.setStyleSheet("QToolTip color: white;")
-
-        # Create a layout for the widget
-        layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(self.label)
-        self.setLayout(layout)
-
-
-app = QtWidgets.QApplication(sys.argv)
-current_time_and_date = CurrentTimeAndDate()
-current_time_and_date.show()
-sys.exit(app.exec())
+        self.time = QtWidgets.QLabel("It is {} and the current time is: {}".format(current_date, current_time))
+        self.time.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
+        
+        font = self.time.font()
+        font.setPointSize(30)
+        self.time.setFont(font)
+        self.time.show()
+        #self.setStyleSheet("QToolTip color: white;")
