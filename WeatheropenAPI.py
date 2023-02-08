@@ -45,3 +45,5 @@ print(f"Date: {date1}, Low: {low1} High: {high1}")
 
 print(f"Date: {date2}, Low: {low2} High: {high2}")
 print(f"Date: {date3}, Low: {low3} High: {high3}")
+#This currently works to display temps, and date in command line, getting it into PyQt
+#is going to be the fun bit
