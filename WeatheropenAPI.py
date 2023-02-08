@@ -6,8 +6,8 @@ import json
 
 #This will be how the system gathers weather data, i haven't read into the GUI much, so into the terminal it goes
 #Just grab zipcode first
-def Latlon(zpcode):
-    print("Zipcode: " +zpcode) #Why in the everloving EARTH do I have to define it like this first.
+def Latlon(zpcode): #Why in the everloving EARTH do I have to define it like this first.
+    print("Zipcode: " +zpcode) 
 
     Location = f"https://nominatim.openstreetmap.org/search?q={zpcode}&format=json" #fstrings are really neat
     response = requests.get(Location)
