@@ -27,7 +27,7 @@ def weathergrab(lat, lon, set):
     readdate1 = datetime.datetime.fromtimestamp(date1).strftime('%d-%m-%Y')
     low1 = data['daily'][set]['temp']['min']
     high1 = data['daily'][set]['temp']['max'] #I think this is right?
-    #descrip = data['daily'][0]['weather']['0']  This was being fickle, it's not use to a string i suppose
+    #descrip = data['daily'][set]['weather']['0']['main']  This was being fickle, it's not use to a string i suppose
     return readdate1, low1, high1
     
 
