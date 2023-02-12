@@ -12,7 +12,7 @@ class TimeWidget(QWidget):
         
         #Change font size (Font selection does not affect displayed font)
         font = QFont("Serif", 50)
-        font.Weight(1000)
+        font.Weight(1000) #Currently does not affect the Font weight
         #font.weight: 200
         
         # Create a label to display the current date and time
