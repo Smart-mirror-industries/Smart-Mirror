@@ -13,11 +13,7 @@ app = QApplication(sys.argv)
 
 # Create a Qt widget, which will be our window.
 window = MainWindow.MainWindow()
-window.show()  # IMPORTANT!!!!! Windows are hidden by default.
+window.showFullScreen()
 
 # Start the event loop.
 app.exec()
-
-
-# Your application won't reach here until you exit and the event
-# loop has stopped.
