@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
 from PyQt6.QtCore import QDateTime, Qt, QTimer
+from PyQt6.QtGui import QFont, QFontDatabase
 
 
 class TimeWidget(QWidget):
@@ -8,14 +9,21 @@ class TimeWidget(QWidget):
 
         # Create a vertical layout
         layout = QVBoxLayout()
-
+        
+        #Change font size (Font selection does not affect displayed font)
+        font = QFont("Serif", 50)
+        font.Weight(1000)
+        #font.weight: 200
+        
         # Create a label to display the current date and time
         self.label = QLabel()
         # self.label.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.label)
+        self.setStyleSheet("QLabel { color : white; }")
 
-        # Set the layout
+        # Set the layout + font
         self.setLayout(layout)
+        self.label.setFont(font)
 
         # Set the timer to update the label every second
         self.timer = QTimer()
@@ -23,6 +31,8 @@ class TimeWidget(QWidget):
         self.timer.start(1000)
 
         self.update_time()
+
+        
 
     def update_time(self):
         # Get the current date and time

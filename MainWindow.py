@@ -17,7 +17,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Smart Mirror")
 
         # Set the background color of the window to white
-        self.setStyleSheet("background-color: white;")
+        self.setStyleSheet("background-color: black;")
+        
 
         # Create an instance of TimeWidget and set it as the central widget
         time_widget = TimeWidget()
