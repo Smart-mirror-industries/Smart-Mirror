@@ -1,21 +1,45 @@
-from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtCore import Qt
-import sys
-from datetime import datetime
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
+from PyQt6.QtCore import QDateTime, Qt, QTimer
+from PyQt6.QtGui import QFont, QFontDatabase
 
 
-class CurrentTimeAndDate(QtWidgets.QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class TimeWidget(QWidget):
+    def __init__(self):
+        super().__init__()
 
-        # Set the current date and time
-        current_date = datetime.now().strftime("%B %d, %Y")
-        current_time = datetime.now().strftime("%I:%M%p").lower()
-        self.time = QtWidgets.QLabel("It is {} and the current time is: {}".format(current_date, current_time))
-        self.time.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
+        # Create a vertical layout
+        layout = QVBoxLayout()
         
-        font = self.time.font()
-        font.setPointSize(30)
-        self.time.setFont(font)
-        self.time.show()
-        #self.setStyleSheet("QToolTip color: white;")
+        #Change font size (Font selection does not affect displayed font)
+        font = QFont("Serif", 50)
+        font.Weight(1000)
+        #font.weight: 200
+        
+        # Create a label to display the current date and time
+        self.label = QLabel()
+        # self.label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(self.label)
+        self.setStyleSheet("QLabel { color : white; }")
+
+        # Set the layout + font
+        self.setLayout(layout)
+        self.label.setFont(font)
+
+        # Set the timer to update the label every second
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.update_time)
+        self.timer.start(1000)
+
+        self.update_time()
+
+        
+
+    def update_time(self):
+        # Get the current date and time
+        datetime = QDateTime.currentDateTime()
+
+        # Format the date and time as a string
+        text = datetime.toString()
+
+        # Update the label
+        self.label.setText(text)
