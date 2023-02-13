@@ -27,11 +27,11 @@ def weathergrab(lat, lon, set):
     readdate1 = datetime.datetime.fromtimestamp(date1).strftime('%d-%m-%Y')
     low1 = data['daily'][set]['temp']['min']
     high1 = data['daily'][set]['temp']['max'] #I think this is right?
-    #descrip = data['daily'][set]['weather']['0']['main']  This was being fickle, it's not use to a string i suppose
+   # descrip = data['daily'][set]['weather']['0']['main']  This was being fickle, it's not use to a string i suppose
     return readdate1, low1, high1
     
-
-zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
+zipcode = '32931'
+#zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
 
 lat, lon = Latlon(zipcode)
 
@@ -45,5 +45,6 @@ print(f"Date: {date1}, Low: {low1} High: {high1}")
 
 print(f"Date: {date2}, Low: {low2} High: {high2}")
 print(f"Date: {date3}, Low: {low3} High: {high3}")
+
 #This currently works to display temps, and date in command line, getting it into PyQt
 #is going to be the fun bit
