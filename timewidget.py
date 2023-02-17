@@ -28,3 +28,4 @@ class TimeWidget(QLabel):
         dateTime = QDateTime.currentDateTime()
         text = dateTime.toString('MMMM d, yyyy - hh:mm:ss')
         self.setText(text)
+

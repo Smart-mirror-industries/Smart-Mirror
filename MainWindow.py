@@ -2,6 +2,7 @@
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QMainWindow, QWidget
 
+
 # import custom subclasses
 from timewidget import TimeWidget
 
@@ -31,4 +32,5 @@ class MainWindow(QMainWindow):
     # moveTimeWidget is specifically for timewidget, each widget needs its own move def
     def moveTimeWidget(self, x, y):
         self.time_widget.move(x, y) # Moves the time widget to the specified position
+
 
