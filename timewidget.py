@@ -1,45 +1,31 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
-from PyQt6.QtCore import QDateTime, Qt, QTimer
-from PyQt6.QtGui import QFont, QFontDatabase
+from PyQt6.QtCore import QDateTime, QTimer, Qt
+from PyQt6.QtGui import QPalette, QColor
+from PyQt6.QtWidgets import QLabel
 
+# This class uses the label widget of PyQt6
+class TimeWidget(QLabel):
+    def __init__(self, parent=None):
+        super().__init__(parent)
 
-class TimeWidget(QWidget):
-    def __init__(self):
-        super().__init__()
+        # sets the font size, font, and color (** must be white to show on black mainwindow **)
+        self.setStyleSheet("font: 25pt Arial; color: white")
 
-        # Create a vertical layout
-        layout = QVBoxLayout()
+        # sets the size of the label so all the text can be seen
+        self.setMinimumSize(450, 100) # Slowly increase until all text is visible
         
-        #Change font size (Font selection does not affect displayed font)
-        font = QFont("Serif", 50)
-        font.Weight(1000) #Currently does not affect the Font weight
-        #font.weight: 200
-        
-        # Create a label to display the current date and time
-        self.label = QLabel()
-        # self.label.setAlignment(Qt.AlignCenter)
-        layout.addWidget(self.label)
-        self.setStyleSheet("QLabel { color : white; }")
+        # aligns the text to be in the center of the label
+        self.setAlignment(Qt.AlignmentFlag.AlignCenter) #if the MinSize is too big, the text position will not match the move command
+                                                        #because it will be centering the text to the middle of the large label
 
-        # Set the layout + font
-        self.setLayout(layout)
-        self.label.setFont(font)
+        # makes a timer to update the time every second
+        self.timer = QTimer(self) # makes a timer
+        self.timer.timeout.connect(self.showTime) #connects the timer to the showTime def (function)
+        self.timer.start(1000) # 1000ms = 1 second
+        self.showTime() # runs showTime initially to get rid of delay at program start
 
-        # Set the timer to update the label every second
-        self.timer = QTimer()
-        self.timer.timeout.connect(self.update_time)
-        self.timer.start(1000)
+    # function that "re-draws" the widget so it displays the time every new second
+    def showTime(self):
+        dateTime = QDateTime.currentDateTime()
+        text = dateTime.toString('MMMM d, yyyy - hh:mm:ss')
+        self.setText(text)
 
-        self.update_time()
-
-        
-
-    def update_time(self):
-        # Get the current date and time
-        datetime = QDateTime.currentDateTime()
-
-        # Format the date and time as a string
-        text = datetime.toString()
-
-        # Update the label
-        self.label.setText(text)
