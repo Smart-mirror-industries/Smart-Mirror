@@ -1,25 +1,34 @@
+# import pyqt6 stuff
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QMainWindow, QWidget
 
-import sys
-
-from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
-from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QLabel
-from PyQt6.QtGui import QPalette
+# import custom subclasses
 from timewidget import TimeWidget
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
-        # Title
-        self.setWindowTitle("Smart Mirror")
-
-        # Set the background color of the window to white
+        # Makes the main window and sets the background to black
+        self.setWindowTitle('Smart Mirror')
+        self.setGeometry(100, 100, 400, 300) #Makes the MainWindow fullscreen
         self.setStyleSheet("background-color: black;")
+
+        # Create the time widget and add it to the main window
+        self.time_widget = TimeWidget(self)
+        self.moveTimeWidget(100, 100) #moves the timewidget using the unique def below
+
+        #Create the x widget and add it to the main window
         
 
-        # Create an instance of TimeWidget and set it as the central widget
-        time_widget = TimeWidget()
-        self.setCentralWidget(time_widget)
+
+    # use this def to add any widget to the mainwindow
+    # do "self.widgetname = classname(self)" in the mainwindow constructor above
+    def addWidget(self, widget):
+        self.central_widget.layout().addWidget(widget) #adds the inputted widget to mainwindow (self)
+
+    # To move specific widgets, create a def per widget using moveTimeWidget as a template:
+
+    # moveTimeWidget is specifically for timewidget, each widget needs its own move def
+    def moveTimeWidget(self, x, y):
+        self.time_widget.move(x, y) # Moves the time widget to the specified position
+
