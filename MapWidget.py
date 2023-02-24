@@ -4,10 +4,11 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 
 
+
 class MapWidget(QWidget):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent=None):
+        super().__init__(parent)
 
         self.initUI()
 
@@ -25,7 +26,7 @@ class MapWidget(QWidget):
         
         #set size and show
         self.setLayout(vbox)
-        self.setGeometry(300, 300, 350, 250)
+        #self.setGeometry(300, 300, 350, 250)
         self.show()
 
     def loadPage(self):

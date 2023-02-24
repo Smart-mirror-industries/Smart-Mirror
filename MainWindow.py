@@ -1,6 +1,6 @@
 # import pyqt6 stuff
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel
 
 
 # import custom subclasses
@@ -14,17 +14,9 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('Smart Mirror')
         self.setStyleSheet("background-color: black;")
 
-        #set up grid widget layout
-        layout = QGridLayout()
+        time_widget = TimeWidget(self)
+        time_widget.move(200, 200)
 
-        #add widgets to grid
-        layout.addWidget(TimeWidget(self), 0,0)
-        layout.addWidget(MapWidget(), 2,1)
-
-        #set the layout up to succesfully show
-        widget = QWidget()
-        widget.setLayout(layout)
-        self.setCentralWidget(widget)
-        
-
-
+        map_widget = MapWidget(self)
+        map_widget.setMinimumSize(300, 300)
+        map_widget.move(800, 200)
