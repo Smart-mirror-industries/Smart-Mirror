@@ -1,4 +1,3 @@
-#Import yahooquery (Yahoo Finance API is currently nonfunctional) 
 import json
 import pandas as pd
 from yahooquery import Ticker as yf
@@ -15,30 +14,39 @@ from PyQt6.QtWidgets import QLabel
 #global ticker
 #ticker = 'IOVA'
 
-global olddata
-
 global xpos
 xpos = 0
+
+#global oldtext
+#oldtext = 'test'
 
 # This class uses the label widget of PyQt6
 class StockWidget(QLabel):
 
     def getticker(self):
-        return self._ticker
+        return self.ticker
 
-    def setticker(self,stock):
-        print(stock)
-        self.ticker = stock
+    #def setticker(self,stock):
+    #    print(stock)
+    #    self.ticker = stock
 
     def __init__(self, parent=None, ticker = 'IOVA'):
         super().__init__(parent)
-        self._ticker = ticker
+        self.parent = parent
+        self.ticker = ticker
+        self.data = None
+        self.data_formatted = {}
+        self.oldtext = 'test'
+        self.updateStock()
+
+        #print(str(self.getticker() + "AAAAA: " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1])))
+
 
         # sets the font size, font, and color (** must be white to show on black mainwindow **)
         self.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(1920, 100) # Slowly increase until all text is visible
+        self.setMinimumSize(3000, 100) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
@@ -54,19 +62,17 @@ class StockWidget(QLabel):
     def updateStock(self):
         
         global xpos
-        global olddata
-        if (xpos == 1800):
+        global oldtext
+
+        if (xpos == 3000):
             xpos = 0
+        #print(oldtext)
         
-        yf_info = yf(self.getticker())        
-        
-        if(xpos <= 5):
-            data = yf_info.financial_data
-            olddata = data
-        
-        #Put data into dataframe
-        data_formatted = pd.json_normalize(olddata)
-        text = str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))
-        self.setText(text) 
+        if(xpos == 0): 
+            yf_info = yf(self.getticker())     
+            #Put data into dataframe
+            data_formatted = pd.json_normalize(yf_info.financial_data)
+            self.oldtext = str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))
+        self.setText(self.oldtext) 
         self.setIndent(xpos)
         xpos = xpos + 1

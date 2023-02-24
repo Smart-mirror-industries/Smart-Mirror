@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import QMainWindow, QWidget
 
 # import custom subclasses
 from timewidget import TimeWidget
-from stockwidget import StockWidget
+from stockscroller import StockScroller
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -18,13 +18,16 @@ class MainWindow(QMainWindow):
         # Create the time widget and add it to the main window
         self.time_widget = TimeWidget(self)
         self.moveTimeWidget(0, 100) #moves the timewidget using the unique def below
-
-        self.stock_widget = StockWidget(self)
-        self.stock_widget2 = StockWidget(self)
-        self.stock_widget3 = StockWidget(self)
-        self.stock_widget.setticker('DIS')
-        self.stock_widget2.setticker('MSFT')
-        self.stock_widget3.setticker('ZIM')
+        self.stock_scroller = StockScroller(self)
+        self.stock_scroller.setMinimumSize(3000, 50)
+        
+        self.stock_scroller.move(-200, 50)
+        #self.stock_widget = StockWidget(self)
+        #self.stock_widget2 = StockWidget(self)
+        #self.stock_widget3 = StockWidget(self)
+        #self.stock_widget.setticker('DIS')
+        #self.stock_widget2.setticker('MSFT')
+        #self.stock_widget3.setticker('ZIM')
         #self.moveStockWidget(0, 0)
 
 
