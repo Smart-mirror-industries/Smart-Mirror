@@ -27,7 +27,8 @@ class StockWidget(QLabel):
         return self._ticker
 
     def setticker(self,stock):
-        self._ticker = stock
+        print(stock)
+        self.ticker = stock
 
     def __init__(self, parent=None, ticker = 'IOVA'):
         super().__init__(parent)
@@ -52,18 +53,17 @@ class StockWidget(QLabel):
 
     def updateStock(self):
         
-        print(self.getticker())
         global xpos
         global olddata
         if (xpos == 1800):
             xpos = 0
         
-        print(self.getticker()+'--------------------------------------------')
-        if((xpos <= 5 )& (self.getticker()!='IOVA')):
-            yf_info = yf(self.getticker())  
+        yf_info = yf(self.getticker())        
+        
+        if(xpos <= 5):
             data = yf_info.financial_data
             olddata = data
-        print(olddata)
+        
         #Put data into dataframe
         data_formatted = pd.json_normalize(olddata)
         text = str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))

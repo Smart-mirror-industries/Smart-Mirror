@@ -25,8 +25,6 @@ class MainWindow(QMainWindow):
         self.stock_widget.setticker('DIS')
         self.stock_widget2.setticker('MSFT')
         self.stock_widget3.setticker('ZIM')
-
-        self.stock_widget.move(-250,0)
         #self.moveStockWidget(0, 0)
 
 
