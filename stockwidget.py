@@ -7,56 +7,66 @@ from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
 
 #Assign Stocks of choice (Currently hardcoded)
-ticker = 'MSFT'
+
 
 #Print current ticker
-print('ticker: %s'%(ticker))
+#print('ticker: %s'%(ticker))
+
+#global ticker
+#ticker = 'IOVA'
 
 global olddata
+
 global xpos
 xpos = 0
 
 # This class uses the label widget of PyQt6
 class StockWidget(QLabel):
-    def __init__(self, parent=None):
+
+    def getticker(self):
+        return self._ticker
+
+    def setticker(self,stock):
+        self._ticker = stock
+
+    def __init__(self, parent=None, ticker = 'IOVA'):
         super().__init__(parent)
+        self._ticker = ticker
 
         # sets the font size, font, and color (** must be white to show on black mainwindow **)
-        self.setStyleSheet("font: 25pt Arial; color: white")
+        self.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(250, 100) # Slowly increase until all text is visible
+        self.setMinimumSize(1920, 100) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
-        self.setAlignment(Qt.AlignmentFlag.AlignCenter) #if the MinSize is too big, the text position will not match the move command
-                                                        #because it will be centering the text to the middle of the large label
+        self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
         
-        self.move(0,0)
+        self.move(-500,0)           
 
 #Select desired data column and print
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.updateStock) #connects the timer to the showTime def (function)
-        self.timer.start(17) # 1000ms = 1 second
+        self.timer.start(8) # update every 8 ms = 120Hz
         self.updateStock() # runs showTime initially to get rid of delay at program start
 
-    # function that "re-draws" the widget so it displays the time every new second
     def updateStock(self):
+        
+        print(self.getticker())
         global xpos
-        xpos = xpos + 1
+        global olddata
+        if (xpos == 1800):
+            xpos = 0
         
-        
-        yf_info = yf(ticker)
-        print(xpos)
-        
-        data = yf_info.financial_data
-        if xpos<=5:
-        #Grab Ticker Data
-            global olddata
+        print(self.getticker()+'--------------------------------------------')
+        if((xpos <= 5 )& (self.getticker()!='IOVA')):
+            yf_info = yf(self.getticker())  
+            data = yf_info.financial_data
             olddata = data
-
+        print(olddata)
         #Put data into dataframe
         data_formatted = pd.json_normalize(olddata)
-        text = str("MSFT: " + str(data_formatted[ticker + '.currentPrice'].iloc[-1]))
+        text = str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))
         self.setText(text) 
-        self.move(xpos,0)
-        self.update()
+        self.setIndent(xpos)
+        xpos = xpos + 1

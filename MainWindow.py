@@ -20,6 +20,13 @@ class MainWindow(QMainWindow):
         self.moveTimeWidget(0, 100) #moves the timewidget using the unique def below
 
         self.stock_widget = StockWidget(self)
+        self.stock_widget2 = StockWidget(self)
+        self.stock_widget3 = StockWidget(self)
+        self.stock_widget.setticker('DIS')
+        self.stock_widget2.setticker('MSFT')
+        self.stock_widget3.setticker('ZIM')
+
+        self.stock_widget.move(-250,0)
         #self.moveStockWidget(0, 0)
 
 
