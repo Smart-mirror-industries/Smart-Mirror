@@ -20,7 +20,7 @@ class MainWindow(QMainWindow):
         self.moveTimeWidget(100, 100) #moves the timewidget using the unique def below
 
         self.reminderwidget = reminderwidget(self)
-        self.movereminderwidget(300,300)
+        self.movereminderwidget(900,700)
 
         #Create the x widget and add it to the main window
         
