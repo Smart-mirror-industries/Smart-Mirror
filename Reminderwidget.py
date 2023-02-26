@@ -1,9 +1,10 @@
+import csv
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor
-from PyQt6.QtWidgets import QLabel
+from PyQt6.QtWidgets import QLabel, QTextEdit
 
 # This class uses the label widget of PyQt6
-class reminderwidget(QLabel):
+class reminderwidget(QLabel): #Thank you Jack for most of this templete.
     def __init__(self, parent=None):
         super().__init__(parent)
 
@@ -11,7 +12,7 @@ class reminderwidget(QLabel):
         self.setStyleSheet("font: 25pt Arial; color: white")
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(400, 100) # Slowly increase until all text is visible
+        self.setMinimumSize(400, 200) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignCenter) #if the MinSize is too big, the text position will not match the move command
@@ -22,12 +23,14 @@ class reminderwidget(QLabel):
        # self.timer = QTimer(self) # makes a timer
         #self.timer.timeout.connect(self.showReminders) #connects the timer to the showTime def (function)
         #self.timer.start(1000) # 1000ms = 1 second
-        self.showReminders() # runs showTime initially to get rid of delay at program start
+        self.showReminders() # display
 
     # function that "re-draws" the widget so it displays the time every new second
     def showReminders(self):
-        
-        text = ("This is a simple remidner:\n to take ur pills \n Wash the car") #Just a test
+        with open('reminders.txt', 'r') as reminder_file:
+            text = reminder_file.read()
+
+        #text = ("This is a simple remidner:\n to take ur pills \n Wash the car") #Just a test
         
         self.setText(text)
     
