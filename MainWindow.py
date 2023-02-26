@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import QMainWindow, QWidget
 
 # import custom subclasses
 from timewidget import TimeWidget
+from Reminderwidget import reminderwidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -18,6 +19,9 @@ class MainWindow(QMainWindow):
         self.time_widget = TimeWidget(self)
         self.moveTimeWidget(100, 100) #moves the timewidget using the unique def below
 
+        self.reminderwidget = reminderwidget(self)
+        self.movereminderwidget(300,300)
+
         #Create the x widget and add it to the main window
         
 
@@ -28,9 +32,13 @@ class MainWindow(QMainWindow):
         self.central_widget.layout().addWidget(widget) #adds the inputted widget to mainwindow (self)
 
     # To move specific widgets, create a def per widget using moveTimeWidget as a template:
-
+    
     # moveTimeWidget is specifically for timewidget, each widget needs its own move def
     def moveTimeWidget(self, x, y):
         self.time_widget.move(x, y) # Moves the time widget to the specified position
+
+    def movereminderwidget(self, x, y):
+        self.reminderwidget.move(x,y)
+        
 
 
