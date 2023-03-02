@@ -99,15 +99,14 @@ class StockWidget(QLabel):
 
     def background_task(self):
         while True:
-            trigger = 0
+            #trigger = 0
             if((self.getx() == 0)):
                 #print('test')
-                #self.updateStock()
+                self.updateStock()
                 #print('HERE')
                 #time.sleep(10)
-                trigger = 1
-            else:
-                self.setx(self.getx())
+            #else:
+            #    self.setx(self.getx())
                 #print(self.getx)
                 #trigger = 0
             
@@ -127,5 +126,5 @@ class StockWidget(QLabel):
         data_formatted = pd.json_normalize(yf_info.financial_data)
         #self.oldtext = 
         self.setText(str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))) 
-        self.setIndent(self.getx())
+        #self.setIndent(self.getx())
     
