@@ -30,7 +30,7 @@ class reminderwidget(QLabel): #Thank you Jack for most of this templete.
         #Currently you open up the txt file to edit it.  Not sure how that could work with the mirror
         with open('reminders.txt', 'r') as reminder_file: #Open the txt to read
             text = reminder_file.read()
-        
+        #I see now Ryan wanted a dynamic list you can expand and shrink and type things into
         self.setText(text)
     
         
