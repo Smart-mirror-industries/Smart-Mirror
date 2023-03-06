@@ -4,8 +4,8 @@ from yahooquery import Ticker as yf
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
-import threading
-import time
+#import threading
+#import time
 #Assign Stocks of choice (Currently hardcoded)
 
 
@@ -62,57 +62,15 @@ class StockWidget(QLabel):
         
         self.move(-500,0)           
 
-#Select desired data column and print
-        #self.timer = QTimer(self) # makes a timer
-        #self.timer.timeout.connect(self.updateStock) #connects the timer to the showTime def (function)
-        #self.timer.start(8) # update every 8 ms = 120Hz
-        #self.updateStock() # runs showTime initially to get rid of delay at program start
-        #while(1):
-        #    if(self.xpos == 0): 
-        #        pass
-        #        self.updateStock()
-            #else:
-               
-            #print(self.xpos)
-        #threading.Thread(target=self.thread_function()).start()
-    #def thread_function(self):
-        #while (1):
-        #    print('hi')
-        #    self.xpos = 1
-        #    if(self.xpos ==0):
-        #        self.updateStock()
-        #    else:
-        #        pass
-        # Create a new thread for the background task
-        
-        #print('testa')
-        #background_thread = threading.Thread(target=self.background_task())
-
-    # Set the thread to run in the background
-        #background_thread.daemon = True
-
-        # Start the thread
-
-        #background_thread.start()
-        #print('testb')
-
 
     def background_task(self):
         while True:
             #trigger = 0
+            print('test')
+
             if((self.getx() == 0)):
-                #print('test')
                 self.updateStock()
-                #print('HERE')
-                #time.sleep(10)
-            #else:
-            #    self.setx(self.getx())
-                #print(self.getx)
-                #trigger = 0
-            
-            #print(self.getx())
-        # Your code for the background task goes here
-            pass
+        pass
 
     
 
