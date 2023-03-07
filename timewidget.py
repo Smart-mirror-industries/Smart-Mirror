@@ -26,6 +26,6 @@ class TimeWidget(QLabel):
     # function that "re-draws" the widget so it displays the time every new second
     def showTime(self):
         dateTime = QDateTime.currentDateTime()
-        text = dateTime.toString('MMMM d, yyyy - hh:mm:ss')
+        text = dateTime.toString('MMMM d, yyyy \n hh:mm:ss')
         self.setText(text)
 
