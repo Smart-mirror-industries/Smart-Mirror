@@ -61,17 +61,6 @@ class StockWidget(QLabel):
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
         
         self.move(-500,0)           
-
-
-    def background_task(self):
-        while True:
-            #trigger = 0
-            print('test')
-
-            if((self.getx() == 0)):
-                self.updateStock()
-        pass
-
     
 
     def updateStock(self):
@@ -84,5 +73,6 @@ class StockWidget(QLabel):
         data_formatted = pd.json_normalize(yf_info.financial_data)
         #self.oldtext = 
         self.setText(str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))) 
+        self.update()
         #self.setIndent(self.getx())
     

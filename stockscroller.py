@@ -7,8 +7,8 @@ from PyQt6.QtWidgets import QLabel
 
 from stockwidget import StockWidget
 from PyQt6.QtWidgets import QMainWindow, QWidget
-import threading
-import multiprocessing
+#import threading
+#import multiprocessing
 global xpos
 xpos = 0
 global delay
@@ -35,34 +35,20 @@ class StockScroller(QWidget):
         #self.moveStockWidget(0, 0)
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.scrollStocks) #connects the timer to the showTime def (function)
-        self.timer.start(16) # update every 8 ms = 120Hz
+        self.timer.start(8) # update every 8 ms = 120Hz
         self.scrollStocks() # runs showTime initially to get rid of delay at program start
-        background_thread = multiprocessing.Process(target=self.stock_widget.background_task)
-        #background_thread.daemon = True
-        #background_thread.start()
-        #background_thread.join()
-
-        background_thread2 = multiprocessing.Process(target=self.stock_widget2.background_task)
-        #background_thread2.daemon = True
-        #background_thread2.start()
-        #background_thread2.join()
-        background_thread3 = multiprocessing.Process(target=self.stock_widget3.background_task)
-        #background_thread3.daemon = True
-        #background_thread3.start()
-        #background_thread3.join()
         
     def scrollStocks(self):
         stoptime = 0
         global delay
         global xpos
 
-        #delay = delay + 1
-
-        #if (delay == 25):
-        #    delay = 0
-
         if (xpos == 3000):
             xpos = 0
+            self.stock_widget.updateStock()
+            self.stock_widget2.updateStock()
+            self.stock_widget3.updateStock()
+
         
         #print(oldtext)
         self.stock_widget.setIndent(xpos)
@@ -70,9 +56,9 @@ class StockScroller(QWidget):
         self.stock_widget3.setIndent(xpos)
 
         #if (delay == 1):
-        self.stock_widget.update()
-        self.stock_widget2.update()
-        self.stock_widget3.update()
+        #self.stock_widget.update()
+        #self.stock_widget2.update()
+        #self.stock_widget3.update()
     
-        xpos = xpos + 2
+        xpos = xpos + 3
         #self.timer.stop()
