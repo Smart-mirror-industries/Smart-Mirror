@@ -6,6 +6,7 @@ from PyQt6.QtWidgets import QMainWindow, QWidget
 # import custom subclasses
 from timewidget import TimeWidget
 from stockscroller import StockScroller
+from Weatherwidget import weatherwidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -20,6 +21,10 @@ class MainWindow(QMainWindow):
         self.moveTimeWidget(0, 100) #moves the timewidget using the unique def below
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)
+
+        self.weather_widget = weatherwidget(self)
+        self.moveWeatherWidget(200,300)
+
         
         self.stock_scroller.move(-200, 50)
         #self.stock_widget = StockWidget(self)
@@ -48,5 +53,7 @@ class MainWindow(QMainWindow):
     # moveTimeWidget is specifically for timewidget, each widget needs its own move def
     def moveStockWidget(self, x, y):
         self.stock_widget.move(x, y) # Moves the time widget to the specified position
+    def moveWeatherWidget(self, x, y):
+        self.weather_widget.move(x, y) # Moves the time widget to the specified position
 
 
