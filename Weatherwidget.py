@@ -1,7 +1,7 @@
 import requests
 import datetime
 from PyQt6.QtCore import QDateTime, QTimer, Qt
-from PyQt6.QtGui import QPalette, QColor
+from PyQt6.QtGui import QPalette, QColor, QPixmap
 from PyQt6.QtWidgets import QLabel
 
 class weatherwidget(QLabel):
@@ -12,7 +12,7 @@ class weatherwidget(QLabel):
         self.setStyleSheet("font: 25pt Arial; color: white")
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(450, 150) # Slowly increase until all text is visible
+        self.setMinimumSize(450, 500) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignCenter) #if the MinSize is too big, the text position will not match the move command
@@ -21,7 +21,7 @@ class weatherwidget(QLabel):
         # makes a timer to update the time every second
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.Showreport) #connects the timer to the showTime def (function)
-        self.timer.start(43200000) # 43200000 = 12 hours
+        self.timer.start(43200000) # 43200000 = 12 hours, Definetly shouldn't be abusing any API with this.
         self.Showreport() # runs showTime initially to get rid of delay at program start
 
     # function that "re-draws" the widget so it displays every 12 hours
@@ -30,8 +30,17 @@ class weatherwidget(QLabel):
         
         lat, lon = self.getLocation(zipcode) #Just so that it does it ONCE, and not again
         
-        date1, low1, high1, descrip1 = self.getReport(lat, lon, 0)
-        text = (f"Date: {date1} \nLow: {low1} \nHigh: {high1}\n Description: {descrip1}\n")
+        date1, low1, high1, descrip1 = self.getReport(lat, lon, 1)
+
+        pixmap1 = QPixmap(f"./weathersprites/{descrip1}.png") #Loads image based off the description
+        self.setPixmap(pixmap1)
+
+        #text = (f"Date: {date1} \nLow: {low1} \nHigh: {high1}\n Description: {descrip1}\n")
+        #text = (f"<html><body>Date: {date1}<br>" )
+        text = (f"<html><body>{date1}<br>Low: {low1}<br>High: {high1}<br><img src='./weathersprites/{descrip1}.png'/></body></html>")
+
+        self.resize(pixmap1.width(), pixmap1.height())
+
         self.setText(text)
 
         # TODO: make it grab the following days, and report back.  This needs to not exceed some limit with the api so I can't test.
