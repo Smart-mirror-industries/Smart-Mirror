@@ -27,8 +27,8 @@ def weathergrab(lat, lon, set):
     readdate1 = datetime.datetime.fromtimestamp(date1).strftime('%d-%m-%Y')
     low1 = data['daily'][set]['temp']['min']
     high1 = data['daily'][set]['temp']['max'] #I think this is right?
-   # descrip = data['daily'][set]['weather']['0']['main']  This was being fickle, it's not use to a string i suppose
-    return readdate1, low1, high1
+    descrip = data['daily'][set]['weather'][0]['main']  #found the issue, '0' around that one 0 is what was doing it.  Making it think it was an integer
+    return readdate1, low1, high1, descrip
     
 zipcode = '32931'
 #zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
@@ -37,14 +37,14 @@ lat, lon = Latlon(zipcode)
 
 print(f"Lat: {lat}, Lon: {lon}")
 
-date1, low1, high1 = weathergrab(lat, lon, 0) #Today's weather, date of today, high and low
-date2, low2, high2 = weathergrab(lat, lon, 1) #Tomorrow's weather, date of course, high and low
-date3, low3, high3 = weathergrab(lat, lon, 2) #The day after tomorrow, ditto as above
+date1, low1, high1, descrip1 = weathergrab(lat, lon, 0) #Today's weather, date of today, high and low
+date2, low2, high2, descrip2 = weathergrab(lat, lon, 1) #Tomorrow's weather, date of course, high and low
+date3, low3, high3, descrip3 = weathergrab(lat, lon, 2) #The day after tomorrow, ditto as above
 
-print(f"Date: {date1}, Low: {low1} High: {high1}")
+print(f"Date: {date1}, Low: {low1} High: {high1}, Description: {descrip1}")
 
-print(f"Date: {date2}, Low: {low2} High: {high2}")
-print(f"Date: {date3}, Low: {low3} High: {high3}")
+print(f"Date: {date2}, Low: {low2} High: {high2}, Description: {descrip2}")
+print(f"Date: {date3}, Low: {low3} High: {high3}, Description: {descrip3}")
 
 #This currently works to display temps, and date in command line, getting it into PyQt
 #is going to be the fun bit
