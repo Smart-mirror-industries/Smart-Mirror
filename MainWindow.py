@@ -23,7 +23,7 @@ class MainWindow(QMainWindow):
         self.stock_scroller.setMinimumSize(3000, 50)
 
         self.weather_widget = weatherwidget(self)
-        self.moveWeatherWidget(200,300)
+        self.moveWeatherWidget(75,200)
 
         
         self.stock_scroller.move(-200, 50)
