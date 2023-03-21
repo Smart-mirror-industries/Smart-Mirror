@@ -39,7 +39,6 @@ class StockScroller(QWidget):
         
     def scrollStocks(self):
         global xpos
-        objflag = 0
 
         if (xpos == 3000):
             xpos = 0
@@ -50,14 +49,6 @@ class StockScroller(QWidget):
         #print(oldtext)
         for i in range(len(self.objs)):
             self.objs[i].setIndent(xpos)
-            if((self.objs[i].x()+xpos) > 2000):
-                self.objs[i].move(xpos-200,0)
-                if(i!=objflag):
-                    self.objs[i].move(xpos+200,0)
-                objflag = i
-            
-
-            
         
         xpos = xpos + 1
         #self.timer.stop()
