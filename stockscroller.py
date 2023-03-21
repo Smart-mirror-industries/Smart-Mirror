@@ -19,46 +19,45 @@ class StockScroller(QWidget):
         super(StockScroller,self).__init__(parent)
 
         #Initialize stock ticker classes
-        self.stock_widget = StockWidget(self,'MSFT')
-        self.stock_widget2 = StockWidget(self,'DIS')
-        self.stock_widget3 = StockWidget(self,'HOOD')
-        #self.stock_widget4 = StockWidget(self,'AMD')
-        
-        #Set stock tickers
-        #self.stock_widget.setticker('DIS')
-        #self.stock_widget2.setticker('MSFT')
-        #self.stock_widget3.setticker('ZIM')
+        tickers = []
+        numtickers = input("# Of stocks you wish to track: ")
 
-        #Assign stock positions (Will dynamically assign positions later)
-        self.stock_widget2.move(-200,0)
-        self.stock_widget3.move(100,0)
-        #self.moveStockWidget(0, 0)
+        for x in range(int(numtickers)):
+            tickers.append(input("Input Ticker: "))
+
+        self.objs = list()
+        for ticker in tickers:
+            self.objs.append(StockWidget(self,ticker))
+
+        for i in range(len(self.objs)):
+            self.objs[i].move(200+200*i,0)
+        
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.scrollStocks) #connects the timer to the showTime def (function)
         self.timer.start(8) # update every 8 ms = 120Hz
         self.scrollStocks() # runs showTime initially to get rid of delay at program start
         
     def scrollStocks(self):
-        stoptime = 0
-        global delay
         global xpos
+        objflag = 0
 
         if (xpos == 3000):
             xpos = 0
-            self.stock_widget.updateStock()
-            self.stock_widget2.updateStock()
-            self.stock_widget3.updateStock()
+            for i in range(len(self.objs)):
+                self.objs[i].updateStock()
 
         
         #print(oldtext)
-        self.stock_widget.setIndent(xpos)
-        self.stock_widget2.setIndent(xpos)
-        self.stock_widget3.setIndent(xpos)
+        for i in range(len(self.objs)):
+            self.objs[i].setIndent(xpos)
+            if((self.objs[i].x()+xpos) > 2000):
+                self.objs[i].move(xpos-200,0)
+                if(i!=objflag):
+                    self.objs[i].move(xpos+200,0)
+                objflag = i
+            
 
-        #if (delay == 1):
-        #self.stock_widget.update()
-        #self.stock_widget2.update()
-        #self.stock_widget3.update()
-    
-        xpos = xpos + 3
+            
+        
+        xpos = xpos + 1
         #self.timer.stop()
