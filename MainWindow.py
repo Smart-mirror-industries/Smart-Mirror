@@ -35,7 +35,10 @@ class MainWindow(QMainWindow):
         #self.stock_widget3.setticker('ZIM')
         #self.moveStockWidget(0, 0)
 
-
+        map_widget = MapWidget(self)
+        map_widget.setMinimumSize(300, 300)
+        map_widget.move(800, 200)
+        
         #Create the x widget and add it to the main window
         
 
