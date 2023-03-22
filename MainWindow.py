@@ -60,6 +60,7 @@ class MainWindow(QMainWindow):
         self.stock_widget.move(x, y) # Moves the time widget to the specified position
     def moveWeatherWidget(self, x, y):
         self.weather_widget.move(x, y) # Moves the time widget to the specified position
-    
+    def moveMapWidget(self, x, y):
+        self.map_widget.move(x,y)
 
 
