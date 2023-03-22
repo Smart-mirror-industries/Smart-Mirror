@@ -12,7 +12,7 @@ class weatherwidget(QLabel):
         self.setStyleSheet("font: 25pt Arial; color: white")
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(250, 700) # Slowly increase until all text is visible
+        self.setMinimumSize(250, 750) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignCenter) #if the MinSize is too big, the text position will not match the move command

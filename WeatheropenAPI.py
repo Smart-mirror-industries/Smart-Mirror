@@ -17,9 +17,9 @@ def Latlon(zpcode): #Why in the everloving EARTH do I have to define it like thi
     return lat, lon
 
 #Now for the weather, maybe eventually
-def weathergrab(lat, lon, set):
+def weathergrab(weather, set):
     #bazinga
-    weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
+    
    #call complete ring ring ring
     response = requests.get(weather)
     data = response.json()
@@ -37,9 +37,11 @@ lat, lon = Latlon(zipcode)
 
 print(f"Lat: {lat}, Lon: {lon}")
 
-date1, low1, high1, descrip1 = weathergrab(lat, lon, 0) #Today's weather, date of today, high and low
-date2, low2, high2, descrip2 = weathergrab(lat, lon, 1) #Tomorrow's weather, date of course, high and low
-date3, low3, high3, descrip3 = weathergrab(lat, lon, 2) #The day after tomorrow, ditto as above
+weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
+
+date1, low1, high1, descrip1 = weathergrab(weather, 0) #Today's weather, date of today, high and low
+date2, low2, high2, descrip2 = weathergrab(weather, 1) #Tomorrow's weather, date of course, high and low
+date3, low3, high3, descrip3 = weathergrab(weather, 2) #The day after tomorrow, ditto as above
 
 print(f"Date: {date1}, Low: {low1} High: {high1}, Description: {descrip1}")
 
