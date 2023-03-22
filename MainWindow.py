@@ -1,10 +1,11 @@
 # import pyqt6 stuff
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QMainWindow, QWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel
 
 
 # import custom subclasses
 from timewidget import TimeWidget
+from MapWidget import MapWidget
 from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
 
@@ -13,7 +14,6 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Makes the main window and sets the background to black
         self.setWindowTitle('Smart Mirror')
-        self.setGeometry(100, 100, 400, 300) #Makes the MainWindow fullscreen
         self.setStyleSheet("background-color: black;")
 
         # Create the time widget and add it to the main window
