@@ -30,7 +30,7 @@ def weathergrab(lat, lon, set):
     descrip = data['daily'][set]['weather'][0]['main']  #found the issue, '0' around that one 0 is what was doing it.  Making it think it was an integer
     return readdate1, low1, high1, descrip
     
-zipcode = '32931'
+zipcode = '32114'
 #zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
 
 lat, lon = Latlon(zipcode)

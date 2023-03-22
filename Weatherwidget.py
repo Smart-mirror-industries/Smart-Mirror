@@ -26,7 +26,7 @@ class weatherwidget(QLabel):
 
     # function that "re-draws" the widget so it displays every 12 hours
     def Showreport(self):
-        zipcode = 32931
+        zipcode = 32114
         
         lat, lon = self.getLocation(zipcode) #Just so that it does it ONCE, and not again
         

@@ -36,8 +36,8 @@ class MainWindow(QMainWindow):
         #self.moveStockWidget(0, 0)
 
         map_widget = MapWidget(self)
-        map_widget.setMinimumSize(300, 300)
-        map_widget.move(800, 200)
+        map_widget.setMinimumSize(600, 500)
+        map_widget.move(700, 200)
         
         #Create the x widget and add it to the main window
         
