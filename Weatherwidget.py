@@ -29,10 +29,12 @@ class weatherwidget(QLabel):
         zipcode = 32114
         
         lat, lon = self.getLocation(zipcode) #Just so that it does it ONCE, and not again
+
+        weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
         
-        date1, low1, high1, descrip1 = self.getReport(lat, lon, 0)
-        date2, low2, high2, descrip2 = self.getReport(lat, lon, 1)
-        date3, low3, high3, descrip3 = self.getReport(lat, lon, 2)
+        date1, low1, high1, descrip1 = self.getReport(weather, 0)
+        date2, low2, high2, descrip2 = self.getReport(weather, 1)
+        date3, low3, high3, descrip3 = self.getReport(weather, 2)
 
         pixmap1 = QPixmap(f"./weathersprites/{descrip1}.png") #Loads image based off the description
         self.setPixmap(pixmap1)
@@ -53,18 +55,17 @@ class weatherwidget(QLabel):
 
         self.setText(text)
 
-        # TODO: make it grab the following days, and report back.  This needs to not exceed some limit with the api so I can't test.
+        
         
     
-    def getReport(self, lat, lon, set): # get report
+    def getReport(self, weather, set): # get report
         #initilzaize report
-        #This is intensely inefficent as this calls the API EVERY single time it gets the data.
-        weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
+        #This is intensely inefficent as this calls the API EVERY single time it gets the data.  FIXED
    
         response = requests.get(weather)
         data = response.json()
         date1 = data['daily'][set]['dt']
-        readdate1 = datetime.datetime.fromtimestamp(date1).strftime('%d-%m-%Y')
+        readdate1 = datetime.datetime.fromtimestamp(date1).strftime('%A')
         low1 = data['daily'][set]['temp']['min']
         high1 = data['daily'][set]['temp']['max'] 
         descrip = data['daily'][set]['weather'][0]['main']  #found the issue, '0' around that one 0 is what was doing it.  Making it think it was an integer

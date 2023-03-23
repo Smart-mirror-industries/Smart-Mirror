@@ -31,13 +31,10 @@ class MapWidget(QWidget):
 
     def loadPage(self):
 
-<<<<<<< Updated upstream
-        with open('maps.html', 'r', encoding='utf-8') as f: #this will call the maps API. DO NOT UNCOMMENT WHEN TESTING OTHER COMPONENETS
-        #with open('test.html', 'r') as f: #placeholder code
-=======
+
         #with open('maps.html', 'r', encoding='utf-8') as f: #this will call the maps API. DO NOT UNCOMMENT WHEN TESTING OTHER COMPONENETS
         with open('test.html', 'r') as f: #placeholder code
->>>>>>> Stashed changes
+
             #read html file and load the page
             html = f.read()
             self.webEngineView.setHtml(html)
