@@ -46,7 +46,7 @@ class weatherwidget(QLabel):
 
         #text = (f"Date: {date1} \nLow: {low1} \nHigh: {high1}\n Description: {descrip1}\n")
         #text = (f"<html><body>Date: {date1}<br>" )
-        text = (f"<html><body>{date1}<br>Low: {low1}<br>High: {high1}<br><img src='./weathersprites/{descrip1}.png'/><br><br>{date2}<br>Low: {low2}<br>High: {high2}<br><img src='./weathersprites/{descrip2}.png'/><br><br>{date3}<br>Low: {low3}<br>High: {high3}<br><img src='./weathersprites/{descrip3}.png'/></body></html>")
+        text = (f"<html><body>{date1}<br>High: {high1}<br>Low: {low1}<br><img src='./weathersprites/{descrip1}.png'/><br><br>{date2}<br>High: {high2}<br>Low: {low2}<br><img src='./weathersprites/{descrip2}.png'/><br><br>{date3}<br>High: {high3}<br>Low: {low3}<br><img src='./weathersprites/{descrip3}.png'/></body></html>")
         #{date2}<br>Low: {low2}<br>High: {high2}<br><img src='./weathersprites/{descrip2}.png'/>
         #<br><br>{date3}<br>Low: {low3}<br>High: {high3}<br><img src='./weathersprites/{descrip3}.png'/>
         self.resize(pixmap1.width(), pixmap1.height())
