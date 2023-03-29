@@ -1,6 +1,6 @@
 # import pyqt6 stuff
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel, QPushButton
 
 
 # import custom subclasses
@@ -12,38 +12,42 @@ from MapWidget import MapWidget
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        # Makes the main window and sets the background to black
         self.setWindowTitle('Smart Mirror')
         self.setStyleSheet("background-color: black;")
+
+        # Set up the start button
+        self.startbutton = QPushButton('Show Widgets', self)
+        self.startbutton.setStyleSheet("font: 20pt Arial; color: white; background-color: black")
+        self.startbutton.setGeometry(50, 50, 300, 50)
+        self.startbutton.clicked.connect(self.show_widgets)
 
         # Create the time widget and add it to the main window
         self.time_widget = TimeWidget(self)
         self.moveTimeWidget(0, 100) #moves the timewidget using the unique def below
+        self.time_widget.hide()
+
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)
 
         self.weather_widget = weatherwidget(self)
         self.moveWeatherWidget(75,200)
-
+        self.weather_widget.hide()
         
         self.stock_scroller.move(-200, 50)
-        #self.stock_widget = StockWidget(self)
-        #self.stock_widget2 = StockWidget(self)
-        #self.stock_widget3 = StockWidget(self)
-        #self.stock_widget.setticker('DIS')
-        #self.stock_widget2.setticker('MSFT')
-        #self.stock_widget3.setticker('ZIM')
-        #self.moveStockWidget(0, 0)
+        self.stock_scroller.hide()
 
         self.map_widget = MapWidget(self)
         self.moveMapWidget(300,200)
         self.map_widget.setMinimumSize(500, 500)
-        
+        self.map_widget.hide()
 
-
-        #Create the x widget and add it to the main window
-        
-
+    def show_widgets(self):
+        # Hide the button and show the labels
+        self.startbutton.hide()
+        self.time_widget.show()
+        self.stock_scroller.show()
+        self.weather_widget.show()
+        self.map_widget.show()
 
     # use this def to add any widget to the mainwindow
     # do "self.widgetname = classname(self)" in the mainwindow constructor above
