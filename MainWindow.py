@@ -8,6 +8,7 @@ from timewidget import TimeWidget
 from MapWidget import MapWidget
 from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
+from MapWidget import MapWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -35,10 +36,12 @@ class MainWindow(QMainWindow):
         #self.stock_widget3.setticker('ZIM')
         #self.moveStockWidget(0, 0)
 
+
         map_widget = MapWidget(self)
         map_widget.setMinimumSize(600, 500)
         map_widget.move(700, 200)
         
+
         #Create the x widget and add it to the main window
         
 
@@ -58,5 +61,7 @@ class MainWindow(QMainWindow):
         self.stock_widget.move(x, y) # Moves the time widget to the specified position
     def moveWeatherWidget(self, x, y):
         self.weather_widget.move(x, y) # Moves the time widget to the specified position
+    def moveMapWidget(self, x, y):
+        self.map_widget.move(x,y)
 
 
