@@ -10,8 +10,11 @@ def init():
     global textsize #theme for text size
     textsize = 'medium' #sizes include: 'small', 'medium', 'large'
 
-    # global mainwindowcolor #background color for the mainwindow
-    # mainwindowcolor = 'dark' 
+    global mainwindowcolor #background color for the mainwindow include: 'black', 'gray', white'
+    mainwindowcolor = 'black' 
+
+    global themewindowswitcher #switcher for theme window selector, 0 is currently hidden 1 is currently visible
+    themewindowswitcher = 1
 
 
 
