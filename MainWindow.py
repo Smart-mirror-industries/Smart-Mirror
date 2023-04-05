@@ -7,14 +7,15 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVB
 from timewidget import TimeWidget
 from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
-from MapWidget import MapWidget
+#from MapWidget import MapWidget
+from CalendarWidget import CalendarWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         # Makes the main window and sets the background to black
         self.setWindowTitle('Smart Mirror')
-        self.setStyleSheet("background-color: black;")
+        self.setStyleSheet("background-color: rgba(0, 0, 0, 255);")
 
         # Create the time widget and add it to the main window
         self.time_widget = TimeWidget(self)
@@ -24,6 +25,11 @@ class MainWindow(QMainWindow):
 
         self.weather_widget = weatherwidget(self)
         self.moveWeatherWidget(75,200)
+
+        self.calendar_widget = CalendarWidget(self)
+        #self.calendar_widget.setupUi()
+        self.calendar_widget.move(900,500)
+        self.calendar_widget.setMinimumSize(500,300)
 
         
         self.stock_scroller.move(-200, 50)
@@ -35,9 +41,9 @@ class MainWindow(QMainWindow):
         #self.stock_widget3.setticker('ZIM')
         #self.moveStockWidget(0, 0)
 
-        self.map_widget = MapWidget(self)
-        self.moveMapWidget(300,200)
-        self.map_widget.setMinimumSize(500, 500)
+        #self.map_widget = MapWidget(self)
+        #self.moveMapWidget(300,200)
+        #self.map_widget.setMinimumSize(500, 500)
         
 
 
@@ -60,7 +66,7 @@ class MainWindow(QMainWindow):
         self.stock_widget.move(x, y) # Moves the time widget to the specified position
     def moveWeatherWidget(self, x, y):
         self.weather_widget.move(x, y) # Moves the time widget to the specified position
-    def moveMapWidget(self, x, y):
-        self.map_widget.move(x,y)
+    #def moveMapWidget(self, x, y):
+    #    self.map_widget.move(x,y)
 
 
