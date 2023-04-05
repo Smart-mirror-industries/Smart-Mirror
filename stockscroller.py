@@ -13,6 +13,9 @@ global xpos
 xpos = 0
 global delay
 delay = 0
+global offset
+offset = 0
+
 
 class StockScroller(QWidget):
     def __init__(self,parent):
@@ -28,9 +31,15 @@ class StockScroller(QWidget):
         self.objs = list()
         for ticker in tickers:
             self.objs.append(StockWidget(self,ticker))
-
         for i in range(len(self.objs)):
-            self.objs[i].move(200+200*i,0)
+            global offset
+            rect = self.objs[i].fontMetrics().boundingRect(self.objs[i].text())
+            #self.objs[i].move(200+200*i,0)
+            self.objs[i].move(offset,0)
+            print(rect)
+
+            offset += rect.width() + 50  # Add 10 pixels of padding between labels        
+            print(offset)
         
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.scrollStocks) #connects the timer to the showTime def (function)
@@ -45,8 +54,6 @@ class StockScroller(QWidget):
             for i in range(len(self.objs)):
                 self.objs[i].updateStock()
 
-        
-        #print(oldtext)
         for i in range(len(self.objs)):
             self.objs[i].setIndent(xpos)
         

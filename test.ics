@@ -6,645 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Ryan Flinchum Calendar (Canvas)
 X-WR-CALDESC:Calendar events for the user\, Ryan Flinchum
 BEGIN:VEVENT
-DTSTAMP:20230222T161100Z
-UID:event-assignment-3065506
-DTSTART;VALUE=DATE;VALUE=DATE:20230221
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Exam 1 [EE 223]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
- nth=02&year=2023#assignment_3065506
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3050986
-DTSTART;VALUE=DATE;VALUE=DATE:20230226
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 90 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n[resistor_color_codes_legend.png] (https://erau.in
- structure.com/courses/155111/files/32986822/preview)\n\nAdditional recomme
- ndations and notes. Although this ME is open-notes/open-book\, it is advis
- able to NOT rely heavily on your notes or book as that will slow you down 
- and may not leave sufficient time to complete the exam itself. Prepare for
-  this ME as you would for any other exam: Study and practice ahead of time
- . Because it is open-notes\, we advise you to create a small equation shee
- t to reference during the exam. The ME is set to close automatically when 
- time runs out.
-SEQUENCE:0
-SUMMARY:ME25a_01 [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=02&year=2023#assignment_3050986
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;">TIME LIMIT 
- and ACCOMMODATIONS.</span> You have <strong>90 minutes to complete</strong
- > this Module Exercise (ME). Please ensure your instructor is aware of any
-  required DSS accommodations\; you must contact your instructor regarding 
- these accommodations at least 24 hours prior to your first attempt of this
-  ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.</span> By
-  starting this ME\, you <span style="color: #e03e2d\;">commit to adhering 
- to Embry-Riddle Aeronautical University's Code of Conduct and the guidelin
- es outlined below</span>.</p>\n<p><span style="font-size: 14pt\;">GUIDELIN
- ES. </span>The following must be followed and/or completed:</p>\n<p style=
- "padding-left: 40px\;"><span style="color: #169179\;"><strong>Resources</s
- trong></span>: This ME is <span style="color: #843fa1\;">open-note/open-bo
- ok<span style="color: #000000\;">. Calculators (including\, e.g.\, Matlab/
- Excel/etc) are allowed.</span></span></p>\n<p style="padding-left: 40px\;"
- ><span style="color: #169179\;"><strong>Time limit</strong></span>: You MU
- ST complete the ME in the allotted time.</p>\n<p style="padding-left: 40px
- \;"><strong><span style="color: #169179\;">Multiple attempts</span></stron
- g>: You are permitted to take this ME multiple times. The recorded grade w
- ill be the highest of your attempts.</p>\n<p><span style="font-size: 14pt\
- ;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;">Unless a 
- problem statement indicates otherwise:</span><br></span></p>\n<p style="pa
- dding-left: 40px\;"><span style="color: #169179\;"><strong>Units:</strong>
-  <span style="color: #000000\;">Report final answers in SI (MKS) base unit
- s.</span></span></p>\n<p style="padding-left: 40px\;"><span style="color: 
- #169179\;"><strong>Significant Figures</strong></span>: Assume given value
- s are <span style="color: #843fa1\;">exact<span style="color: #000000\;">.
-  Report final calculations after rounding to </span></span><span style="co
- lor: #843fa1\;">three significant figures</span>. (Tip: Avoid excessive ro
- undoff error by retaining four or more significant figures on any intermed
- iate calculations.)</p>\n<p><img id="32108024" src="https://erau.instructu
- re.com/courses/155111/files/32986822/preview" alt="resistor_color_codes_le
- gend.png" width="379" height="198" data-api-endpoint="https://erau.instruc
- ture.com/api/v1/courses/155111/files/32986822" data-api-returntype="File">
- </p>\n<p><span style="font-size: 10pt\; color: #95a5a6\;"><strong>Addition
- al recommendations and notes. </strong>Although this ME is open-notes/open
- -book\, it is advisable to NOT rely heavily on your notes or book as that 
- will slow you down and may not leave sufficient time to complete the exam 
- itself. Prepare for this ME as you would for any other exam: Study and pra
- ctice ahead of time. Because it is open-notes\, we advise you to create a 
- small equation sheet to reference during the exam. The ME is set to close 
- automatically when time runs out.</span></p><script src="https://instructu
- re-uploads.s3.amazonaws.com/account_23860000000000001/attachments/26765423
- /canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3051113
-DTSTART;VALUE=DATE;VALUE=DATE:20230226
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 90 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n[resistor_color_codes_legend.png] (https://erau.in
- structure.com/courses/155111/files/32986822/preview)\n\nAdditional recomme
- ndations and notes. Although this ME is open-notes/open-book\, it is advis
- able to NOT rely heavily on your notes or book as that will slow you down 
- and may not leave sufficient time to complete the exam itself. Prepare for
-  this ME as you would for any other exam: Study and practice ahead of time
- . Because it is open-notes\, we advise you to create a small equation shee
- t to reference during the exam. The ME is set to close automatically when 
- time runs out.
-SEQUENCE:0
-SUMMARY:ME25a_02 [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=02&year=2023#assignment_3051113
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;">TIME LIMIT 
- and ACCOMMODATIONS.</span> You have <strong>90 minutes to complete</strong
- > this Module Exercise (ME). Please ensure your instructor is aware of any
-  required DSS accommodations\; you must contact your instructor regarding 
- these accommodations at least 24 hours prior to your first attempt of this
-  ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.</span> By
-  starting this ME\, you <span style="color: #e03e2d\;">commit to adhering 
- to Embry-Riddle Aeronautical University's Code of Conduct and the guidelin
- es outlined below</span>.</p>\n<p><span style="font-size: 14pt\;">GUIDELIN
- ES. </span>The following must be followed and/or completed:</p>\n<p style=
- "padding-left: 40px\;"><span style="color: #169179\;"><strong>Resources</s
- trong></span>: This ME is <span style="color: #843fa1\;">open-note/open-bo
- ok<span style="color: #000000\;">. Calculators (including\, e.g.\, Matlab/
- Excel/etc) are allowed.</span></span></p>\n<p style="padding-left: 40px\;"
- ><span style="color: #169179\;"><strong>Time limit</strong></span>: You MU
- ST complete the ME in the allotted time.</p>\n<p style="padding-left: 40px
- \;"><strong><span style="color: #169179\;">Multiple attempts</span></stron
- g>: You are permitted to take this ME multiple times. The recorded grade w
- ill be the highest of your attempts.</p>\n<p><span style="font-size: 14pt\
- ;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;">Unless a 
- problem statement indicates otherwise:</span><br></span></p>\n<p style="pa
- dding-left: 40px\;"><span style="color: #169179\;"><strong>Units:</strong>
-  <span style="color: #000000\;">Report final answers in SI (MKS) base unit
- s.</span></span></p>\n<p style="padding-left: 40px\;"><span style="color: 
- #169179\;"><strong>Significant Figures</strong></span>: Assume given value
- s are <span style="color: #843fa1\;">exact<span style="color: #000000\;">.
-  Report final calculations after rounding to </span></span><span style="co
- lor: #843fa1\;">three significant figures</span>. (Tip: Avoid excessive ro
- undoff error by retaining four or more significant figures on any intermed
- iate calculations.)</p>\n<p><img id="32108024" src="https://erau.instructu
- re.com/courses/155111/files/32986822/preview" alt="resistor_color_codes_le
- gend.png" width="379" height="198" data-api-endpoint="https://erau.instruc
- ture.com/api/v1/courses/155111/files/32986822" data-api-returntype="File">
- </p>\n<p><span style="font-size: 10pt\; color: #95a5a6\;"><strong>Addition
- al recommendations and notes. </strong>Although this ME is open-notes/open
- -book\, it is advisable to NOT rely heavily on your notes or book as that 
- will slow you down and may not leave sufficient time to complete the exam 
- itself. Prepare for this ME as you would for any other exam: Study and pra
- ctice ahead of time. Because it is open-notes\, we advise you to create a 
- small equation sheet to reference during the exam. The ME is set to close 
- automatically when time runs out.</span></p><script src="https://instructu
- re-uploads.s3.amazonaws.com/account_23860000000000001/attachments/26765423
- /canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3051073
-DTSTART;VALUE=DATE;VALUE=DATE:20230226
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 90 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n[resistor_color_codes_legend.png] (https://erau.in
- structure.com/courses/155111/files/32986822/preview)\n\nAdditional recomme
- ndations and notes. Although this ME is open-notes/open-book\, it is advis
- able to NOT rely heavily on your notes or book as that will slow you down 
- and may not leave sufficient time to complete the exam itself. Prepare for
-  this ME as you would for any other exam: Study and practice ahead of time
- . Because it is open-notes\, we advise you to create a small equation shee
- t to reference during the exam. The ME is set to close automatically when 
- time runs out.
-SEQUENCE:0
-SUMMARY:ME25a_03 [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=02&year=2023#assignment_3051073
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;">TIME LIMIT 
- and ACCOMMODATIONS.</span> You have <strong>90 minutes to complete</strong
- > this Module Exercise (ME). Please ensure your instructor is aware of any
-  required DSS accommodations\; you must contact your instructor regarding 
- these accommodations at least 24 hours prior to your first attempt of this
-  ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.</span> By
-  starting this ME\, you <span style="color: #e03e2d\;">commit to adhering 
- to Embry-Riddle Aeronautical University's Code of Conduct and the guidelin
- es outlined below</span>.</p>\n<p><span style="font-size: 14pt\;">GUIDELIN
- ES. </span>The following must be followed and/or completed:</p>\n<p style=
- "padding-left: 40px\;"><span style="color: #169179\;"><strong>Resources</s
- trong></span>: This ME is <span style="color: #843fa1\;">open-note/open-bo
- ok<span style="color: #000000\;">. Calculators (including\, e.g.\, Matlab/
- Excel/etc) are allowed.</span></span></p>\n<p style="padding-left: 40px\;"
- ><span style="color: #169179\;"><strong>Time limit</strong></span>: You MU
- ST complete the ME in the allotted time.</p>\n<p style="padding-left: 40px
- \;"><strong><span style="color: #169179\;">Multiple attempts</span></stron
- g>: You are permitted to take this ME multiple times. The recorded grade w
- ill be the highest of your attempts.</p>\n<p><span style="font-size: 14pt\
- ;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;">Unless a 
- problem statement indicates otherwise:</span><br></span></p>\n<p style="pa
- dding-left: 40px\;"><span style="color: #169179\;"><strong>Units:</strong>
-  <span style="color: #000000\;">Report final answers in SI (MKS) base unit
- s.</span></span></p>\n<p style="padding-left: 40px\;"><span style="color: 
- #169179\;"><strong>Significant Figures</strong></span>: Assume given value
- s are <span style="color: #843fa1\;">exact<span style="color: #000000\;">.
-  Report final calculations after rounding to </span></span><span style="co
- lor: #843fa1\;">three significant figures</span>. (Tip: Avoid excessive ro
- undoff error by retaining four or more significant figures on any intermed
- iate calculations.)</p>\n<p><img id="32108024" src="https://erau.instructu
- re.com/courses/155111/files/32986822/preview" alt="resistor_color_codes_le
- gend.png" width="379" height="198" data-api-endpoint="https://erau.instruc
- ture.com/api/v1/courses/155111/files/32986822" data-api-returntype="File">
- </p>\n<p><span style="font-size: 10pt\; color: #95a5a6\;"><strong>Addition
- al recommendations and notes. </strong>Although this ME is open-notes/open
- -book\, it is advisable to NOT rely heavily on your notes or book as that 
- will slow you down and may not leave sufficient time to complete the exam 
- itself. Prepare for this ME as you would for any other exam: Study and pra
- ctice ahead of time. Because it is open-notes\, we advise you to create a 
- small equation sheet to reference during the exam. The ME is set to close 
- automatically when time runs out.</span></p><script src="https://instructu
- re-uploads.s3.amazonaws.com/account_23860000000000001/attachments/26765423
- /canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3051046
-DTSTART;VALUE=DATE;VALUE=DATE:20230226
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 30 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n \n\nAdditional recommendations and notes. Althou
- gh this ME is open-notes/open-book\, it is advisable to NOT rely heavily o
- n your notes or book as that will slow you down and may not leave sufficie
- nt time to complete the exam itself. Prepare for this ME as you would for 
- any other exam: Study and practice ahead of time. Because it is open-notes
- \, we advise you to create a small equation sheet to reference during the 
- exam. The ME is set to close automatically when time runs out.
-SEQUENCE:0
-SUMMARY:ME25b [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=02&year=2023#assignment_3051046
-X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
- ersion jqueryUIWidgetized enhanced">\n<p><span style="font-size: 14pt\;">T
- IME LIMIT and ACCOMMODATIONS.</span> You have <strong>30 minutes to comple
- te</strong> this Module Exercise (ME). Please ensure your instructor is aw
- are of any required DSS accommodations\; you must contact your instructor 
- regarding these accommodations at least 24 hours prior to your first attem
- pt of this ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.
- </span> By starting this ME\, you <span style="color: #e03e2d\;">commit to
-  adhering to Embry-Riddle Aeronautical University's Code of Conduct and th
- e guidelines outlined below</span>.</p>\n<p><span style="font-size: 14pt\;
- ">GUIDELINES. </span>The following must be followed and/or completed:</p>\
- n<p style="padding-left: 40px\;"><span style="color: #169179\;"><strong>Re
- sources</strong></span>: This ME is <span style="color: #843fa1\;">open-no
- te/open-book<span style="color: #000000\;">. Calculators (including\, e.g.
- \, Matlab/Excel/etc) are allowed.</span></span></p>\n<p style="padding-lef
- t: 40px\;"><span style="color: #169179\;"><strong>Time limit</strong></spa
- n>: You MUST complete the ME in the allotted time.</p>\n<p style="padding-
- left: 40px\;"><strong><span style="color: #169179\;">Multiple attempts</sp
- an></strong>: You are permitted to take this ME multiple times. The record
- ed grade will be the highest of your attempts.</p>\n<p><span style="font-s
- ize: 14pt\;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;"
- >Unless a problem statement indicates otherwise:</span><br></span></p>\n<p
-  style="padding-left: 40px\;"><span style="color: #169179\;"><strong>Units
- :</strong> <span style="color: #000000\;">Report final answers in SI (MKS)
-  base units.</span></span></p>\n<p style="padding-left: 40px\;"><span styl
- e="color: #169179\;"><strong>Significant Figures</strong></span>: Assume g
- iven values are <span style="color: #843fa1\;">exact<span style="color: #0
- 00000\;">. Report final calculations after rounding to </span></span><span
-  style="color: #843fa1\;">three significant figures</span>. (Tip: Avoid ex
- cessive roundoff error by retaining four or more significant figures on an
- y intermediate calculations.)</p>\n<p>&nbsp\;</p>\n<p><span style="font-si
- ze: 10pt\; color: #95a5a6\;"><strong>Additional recommendations and notes.
-  </strong>Although this ME is open-notes/open-book\, it is advisable to NO
- T rely heavily on your notes or book as that will slow you down and may no
- t leave sufficient time to complete the exam itself. Prepare for this ME a
- s you would for any other exam: Study and practice ahead of time. Because 
- it is open-notes\, we advise you to create a small equation sheet to refer
- ence during the exam. The ME is set to close automatically when time runs 
- out.</span></p>\n</div><script src="https://instructure-uploads.s3.amazona
- ws.com/account_23860000000000001/attachments/26765423/canvas_global_app.js
- "></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230222T211400Z
-UID:event-assignment-3114682
-DTSTART;VALUE=DATE;VALUE=DATE:20230228
-CLASS:PUBLIC
-DESCRIPTION:The only official deliverable for the sprint three is the softw
- are architecture\, which is due on Tuesday the 28th.
-SEQUENCE:0
-SUMMARY:Sprint Three Deliverable [SE 300]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
- nth=02&year=2023#assignment_3114682
-X-ALT-DESC;FMTTYPE=text/html:<p>The only official deliverable for the sprin
- t three is the software architecture\, which is due on Tuesday the 28th.</
- p><script src="https://instructure-uploads.s3.amazonaws.com/account_238600
- 00000000001/attachments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230305T214300Z
-UID:event-assignment-3082599
-DTSTART:20230301T221500Z
-DTEND:20230301T221500Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Lab 5  [EE 224]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
- nth=03&year=2023#assignment_3082599
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3051104
-DTSTART;VALUE=DATE;VALUE=DATE:20230305
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 90 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n \n\nAdditional recommendations and notes. Althou
- gh this ME is open-notes/open-book\, it is advisable to NOT rely heavily o
- n your notes or book as that will slow you down and may not leave sufficie
- nt time to complete the exam itself. Prepare for this ME as you would for 
- any other exam: Study and practice ahead of time. Because it is open-notes
- \, we advise you to create a small equation sheet to reference during the 
- exam. The ME is set to close automatically when time runs out.
-SEQUENCE:0
-SUMMARY:ME26a_01 [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=03&year=2023#assignment_3051104
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;">TIME LIMIT 
- and ACCOMMODATIONS.</span> You have <strong>90 minutes to complete</strong
- > this Module Exercise (ME). Please ensure your instructor is aware of any
-  required DSS accommodations\; you must contact your instructor regarding 
- these accommodations at least 24 hours prior to your first attempt of this
-  ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.</span> By
-  starting this ME\, you <span style="color: #e03e2d\;">commit to adhering 
- to Embry-Riddle Aeronautical University's Code of Conduct and the guidelin
- es outlined below</span>.</p>\n<p><span style="font-size: 14pt\;">GUIDELIN
- ES. </span>The following must be followed and/or completed:</p>\n<p style=
- "padding-left: 40px\;"><span style="color: #169179\;"><strong>Resources</s
- trong></span>: This ME is <span style="color: #843fa1\;">open-note/open-bo
- ok<span style="color: #000000\;">. Calculators (including\, e.g.\, Matlab/
- Excel/etc) are allowed.</span></span></p>\n<p style="padding-left: 40px\;"
- ><span style="color: #169179\;"><strong>Time limit</strong></span>: You MU
- ST complete the ME in the allotted time.</p>\n<p style="padding-left: 40px
- \;"><strong><span style="color: #169179\;">Multiple attempts</span></stron
- g>: You are permitted to take this ME multiple times. The recorded grade w
- ill be the highest of your attempts.</p>\n<p><span style="font-size: 14pt\
- ;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;">Unless a 
- problem statement indicates otherwise:</span><br></span></p>\n<p style="pa
- dding-left: 40px\;"><span style="color: #169179\;"><strong>Units:</strong>
-  <span style="color: #000000\;">Report final answers in SI (MKS) base unit
- s.</span></span></p>\n<p style="padding-left: 40px\;"><span style="color: 
- #169179\;"><strong>Significant Figures</strong></span>: Assume given value
- s are <span style="color: #843fa1\;">exact<span style="color: #000000\;">.
-  Report final calculations after rounding to </span></span><span style="co
- lor: #843fa1\;">three significant figures</span>. (Tip: Avoid excessive ro
- undoff error by retaining four or more significant figures on any intermed
- iate calculations.)</p>\n<p>&nbsp\;</p>\n<p><span style="font-size: 10pt\;
-  color: #95a5a6\;"><strong>Additional recommendations and notes. </strong>
- Although this ME is open-notes/open-book\, it is advisable to NOT rely hea
- vily on your notes or book as that will slow you down and may not leave su
- fficient time to complete the exam itself. Prepare for this ME as you woul
- d for any other exam: Study and practice ahead of time. Because it is open
- -notes\, we advise you to create a small equation sheet to reference durin
- g the exam. The ME is set to close automatically when time runs out.</span
- ></p><script src="https://instructure-uploads.s3.amazonaws.com/account_238
- 60000000000001/attachments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3050971
-DTSTART;VALUE=DATE;VALUE=DATE:20230305
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 90 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n \n\nAdditional recommendations and notes. Althou
- gh this ME is open-notes/open-book\, it is advisable to NOT rely heavily o
- n your notes or book as that will slow you down and may not leave sufficie
- nt time to complete the exam itself. Prepare for this ME as you would for 
- any other exam: Study and practice ahead of time. Because it is open-notes
- \, we advise you to create a small equation sheet to reference during the 
- exam. The ME is set to close automatically when time runs out.
-SEQUENCE:0
-SUMMARY:ME26a_02 [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=03&year=2023#assignment_3050971
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;">TIME LIMIT 
- and ACCOMMODATIONS.</span> You have <strong>90 minutes to complete</strong
- > this Module Exercise (ME). Please ensure your instructor is aware of any
-  required DSS accommodations\; you must contact your instructor regarding 
- these accommodations at least 24 hours prior to your first attempt of this
-  ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.</span> By
-  starting this ME\, you <span style="color: #e03e2d\;">commit to adhering 
- to Embry-Riddle Aeronautical University's Code of Conduct and the guidelin
- es outlined below</span>.</p>\n<p><span style="font-size: 14pt\;">GUIDELIN
- ES. </span>The following must be followed and/or completed:</p>\n<p style=
- "padding-left: 40px\;"><span style="color: #169179\;"><strong>Resources</s
- trong></span>: This ME is <span style="color: #843fa1\;">open-note/open-bo
- ok<span style="color: #000000\;">. Calculators (including\, e.g.\, Matlab/
- Excel/etc) are allowed.</span></span></p>\n<p style="padding-left: 40px\;"
- ><span style="color: #169179\;"><strong>Time limit</strong></span>: You MU
- ST complete the ME in the allotted time.</p>\n<p style="padding-left: 40px
- \;"><strong><span style="color: #169179\;">Multiple attempts</span></stron
- g>: You are permitted to take this ME multiple times. The recorded grade w
- ill be the highest of your attempts.</p>\n<p><span style="font-size: 14pt\
- ;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;">Unless a 
- problem statement indicates otherwise:</span><br></span></p>\n<p style="pa
- dding-left: 40px\;"><span style="color: #169179\;"><strong>Units:</strong>
-  <span style="color: #000000\;">Report final answers in SI (MKS) base unit
- s.</span></span></p>\n<p style="padding-left: 40px\;"><span style="color: 
- #169179\;"><strong>Significant Figures</strong></span>: Assume given value
- s are <span style="color: #843fa1\;">exact<span style="color: #000000\;">.
-  Report final calculations after rounding to </span></span><span style="co
- lor: #843fa1\;">three significant figures</span>. (Tip: Avoid excessive ro
- undoff error by retaining four or more significant figures on any intermed
- iate calculations.)</p>\n<p>&nbsp\;</p>\n<p><span style="font-size: 10pt\;
-  color: #95a5a6\;"><strong>Additional recommendations and notes. </strong>
- Although this ME is open-notes/open-book\, it is advisable to NOT rely hea
- vily on your notes or book as that will slow you down and may not leave su
- fficient time to complete the exam itself. Prepare for this ME as you woul
- d for any other exam: Study and practice ahead of time. Because it is open
- -notes\, we advise you to create a small equation sheet to reference durin
- g the exam. The ME is set to close automatically when time runs out.</span
- ></p><script src="https://instructure-uploads.s3.amazonaws.com/account_238
- 60000000000001/attachments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3051052
-DTSTART;VALUE=DATE;VALUE=DATE:20230305
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 90 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n \n\nAdditional recommendations and notes. Althou
- gh this ME is open-notes/open-book\, it is advisable to NOT rely heavily o
- n your notes or book as that will slow you down and may not leave sufficie
- nt time to complete the exam itself. Prepare for this ME as you would for 
- any other exam: Study and practice ahead of time. Because it is open-notes
- \, we advise you to create a small equation sheet to reference during the 
- exam. The ME is set to close automatically when time runs out.
-SEQUENCE:0
-SUMMARY:ME26a_03 [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=03&year=2023#assignment_3051052
-X-ALT-DESC;FMTTYPE=text/html:<p><span style="font-size: 14pt\;">TIME LIMIT 
- and ACCOMMODATIONS.</span> You have <strong>90 minutes to complete</strong
- > this Module Exercise (ME). Please ensure your instructor is aware of any
-  required DSS accommodations\; you must contact your instructor regarding 
- these accommodations at least 24 hours prior to your first attempt of this
-  ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.</span> By
-  starting this ME\, you <span style="color: #e03e2d\;">commit to adhering 
- to Embry-Riddle Aeronautical University's Code of Conduct and the guidelin
- es outlined below</span>.</p>\n<p><span style="font-size: 14pt\;">GUIDELIN
- ES. </span>The following must be followed and/or completed:</p>\n<p style=
- "padding-left: 40px\;"><span style="color: #169179\;"><strong>Resources</s
- trong></span>: This ME is <span style="color: #843fa1\;">open-note/open-bo
- ok<span style="color: #000000\;">. Calculators (including\, e.g.\, Matlab/
- Excel/etc) are allowed.</span></span></p>\n<p style="padding-left: 40px\;"
- ><span style="color: #169179\;"><strong>Time limit</strong></span>: You MU
- ST complete the ME in the allotted time.</p>\n<p style="padding-left: 40px
- \;"><strong><span style="color: #169179\;">Multiple attempts</span></stron
- g>: You are permitted to take this ME multiple times. The recorded grade w
- ill be the highest of your attempts.</p>\n<p><span style="font-size: 14pt\
- ;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;">Unless a 
- problem statement indicates otherwise:</span><br></span></p>\n<p style="pa
- dding-left: 40px\;"><span style="color: #169179\;"><strong>Units:</strong>
-  <span style="color: #000000\;">Report final answers in SI (MKS) base unit
- s.</span></span></p>\n<p style="padding-left: 40px\;"><span style="color: 
- #169179\;"><strong>Significant Figures</strong></span>: Assume given value
- s are <span style="color: #843fa1\;">exact<span style="color: #000000\;">.
-  Report final calculations after rounding to </span></span><span style="co
- lor: #843fa1\;">three significant figures</span>. (Tip: Avoid excessive ro
- undoff error by retaining four or more significant figures on any intermed
- iate calculations.)</p>\n<p>&nbsp\;</p>\n<p><span style="font-size: 10pt\;
-  color: #95a5a6\;"><strong>Additional recommendations and notes. </strong>
- Although this ME is open-notes/open-book\, it is advisable to NOT rely hea
- vily on your notes or book as that will slow you down and may not leave su
- fficient time to complete the exam itself. Prepare for this ME as you woul
- d for any other exam: Study and practice ahead of time. Because it is open
- -notes\, we advise you to create a small equation sheet to reference durin
- g the exam. The ME is set to close automatically when time runs out.</span
- ></p><script src="https://instructure-uploads.s3.amazonaws.com/account_238
- 60000000000001/attachments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230108T185100Z
-UID:event-assignment-3050977
-DTSTART;VALUE=DATE;VALUE=DATE:20230305
-CLASS:PUBLIC
-DESCRIPTION:TIME LIMIT and ACCOMMODATIONS. You have 30 minutes to complete 
- this Module Exercise (ME). Please ensure your instructor is aware of any r
- equired DSS accommodations\; you must contact your instructor regarding th
- ese accommodations at least 24 hours prior to your first attempt of this M
- E.\n\nACADEMIC INTEGRITY. By starting this ME\, you commit to adhering to 
- Embry-Riddle Aeronautical University's Code of Conduct and the guidelines 
- outlined below.\n\nGUIDELINES. The following must be followed and/or compl
- eted:\n\nResources: This ME is open-note/open-book. Calculators (including
- \, e.g.\, Matlab/Excel/etc) are allowed.\n\nTime limit: You MUST complete 
- the ME in the allotted time.\n\nMultiple attempts: You are permitted to ta
- ke this ME multiple times. The recorded grade will be the highest of your 
- attempts.\n\nUNITS and SIGNIFICANT FIGURES. Unless a problem statement ind
- icates otherwise:\n\nUnits: Report final answers in SI (MKS) base units.\n
- \nSignificant Figures: Assume given values are exact. Report final calcula
- tions after rounding to three significant figures. (Tip: Avoid excessive r
- oundoff error by retaining four or more significant figures on any interme
- diate calculations.)\n\n \n\nAdditional recommendations and notes. Althou
- gh this ME is open-notes/open-book\, it is advisable to NOT rely heavily o
- n your notes or book as that will slow you down and may not leave sufficie
- nt time to complete the exam itself. Prepare for this ME as you would for 
- any other exam: Study and practice ahead of time. Because it is open-notes
- \, we advise you to create a small equation sheet to reference during the 
- exam. The ME is set to close automatically when time runs out.
-SEQUENCE:0
-SUMMARY:ME26b [PS 250]
-URL:https://erau.instructure.com/calendar?include_contexts=course_155111&mo
- nth=03&year=2023#assignment_3050977
-X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
- ersion jqueryUIWidgetized enhanced">\n<p><span style="font-size: 14pt\;">T
- IME LIMIT and ACCOMMODATIONS.</span> You have <strong>30 minutes to comple
- te</strong> this Module Exercise (ME). Please ensure your instructor is aw
- are of any required DSS accommodations\; you must contact your instructor 
- regarding these accommodations at least 24 hours prior to your first attem
- pt of this ME.</p>\n<p><span style="font-size: 14pt\;">ACADEMIC INTEGRITY.
- </span> By starting this ME\, you <span style="color: #e03e2d\;">commit to
-  adhering to Embry-Riddle Aeronautical University's Code of Conduct and th
- e guidelines outlined below</span>.</p>\n<p><span style="font-size: 14pt\;
- ">GUIDELINES. </span>The following must be followed and/or completed:</p>\
- n<p style="padding-left: 40px\;"><span style="color: #169179\;"><strong>Re
- sources</strong></span>: This ME is <span style="color: #843fa1\;">open-no
- te/open-book<span style="color: #000000\;">. Calculators (including\, e.g.
- \, Matlab/Excel/etc) are allowed.</span></span></p>\n<p style="padding-lef
- t: 40px\;"><span style="color: #169179\;"><strong>Time limit</strong></spa
- n>: You MUST complete the ME in the allotted time.</p>\n<p style="padding-
- left: 40px\;"><strong><span style="color: #169179\;">Multiple attempts</sp
- an></strong>: You are permitted to take this ME multiple times. The record
- ed grade will be the highest of your attempts.</p>\n<p><span style="font-s
- ize: 14pt\;">UNITS and SIGNIFICANT FIGURES. <span style="color: #e03e2d\;"
- >Unless a problem statement indicates otherwise:</span><br></span></p>\n<p
-  style="padding-left: 40px\;"><span style="color: #169179\;"><strong>Units
- :</strong> <span style="color: #000000\;">Report final answers in SI (MKS)
-  base units.</span></span></p>\n<p style="padding-left: 40px\;"><span styl
- e="color: #169179\;"><strong>Significant Figures</strong></span>: Assume g
- iven values are <span style="color: #843fa1\;">exact<span style="color: #0
- 00000\;">. Report final calculations after rounding to </span></span><span
-  style="color: #843fa1\;">three significant figures</span>. (Tip: Avoid ex
- cessive roundoff error by retaining four or more significant figures on an
- y intermediate calculations.)</p>\n<p>&nbsp\;</p>\n<p><span style="font-si
- ze: 10pt\; color: #95a5a6\;"><strong>Additional recommendations and notes.
-  </strong>Although this ME is open-notes/open-book\, it is advisable to NO
- T rely heavily on your notes or book as that will slow you down and may no
- t leave sufficient time to complete the exam itself. Prepare for this ME a
- s you would for any other exam: Study and practice ahead of time. Because 
- it is open-notes\, we advise you to create a small equation sheet to refer
- ence during the exam. The ME is set to close automatically when time runs 
- out.</span></p>\n</div><script src="https://instructure-uploads.s3.amazona
- ws.com/account_23860000000000001/attachments/26765423/canvas_global_app.js
- "></script>
-END:VEVENT
-BEGIN:VEVENT
 DTSTAMP:20230303T194400Z
 UID:event-assignment-3060240
 DTSTART;VALUE=DATE;VALUE=DATE:20230306
@@ -673,7 +34,7 @@ X-ALT-DESC;FMTTYPE=text/html:<p>P3.12\, P3.14\, P3.24\, P3.25</p><script sr
  attachments/26765423/canvas_global_app.js"></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230303T210800Z
+DTSTAMP:20230328T120300Z
 UID:event-assignment-3082793
 DTSTART:20230308T221500Z
 DTEND:20230308T221500Z
@@ -994,7 +355,7 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230308T221500Z
+DTSTAMP:20230328T130700Z
 UID:event-assignment-3082794
 DTSTART:20230322T211500Z
 DTEND:20230322T211500Z
@@ -1007,7 +368,7 @@ URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
 X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230321T004300Z
+DTSTAMP:20230323T135100Z
 UID:event-assignment-3065519
 DTSTART;VALUE=DATE;VALUE=DATE:20230323
 CLASS:PUBLIC
@@ -1023,7 +384,7 @@ X-ALT-DESC;FMTTYPE=text/html:<p><span>P3.45\, P3.62\, P3.67，P4.3\, P4.22\
  canvas_global_app.js"></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230321T200300Z
+DTSTAMP:20230330T163600Z
 UID:event-assignment-3065527
 DTSTART;VALUE=DATE;VALUE=DATE:20230323
 CLASS:PUBLIC
@@ -1331,7 +692,23 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230308T180900Z
+DTSTAMP:20230327T183000Z
+UID:event-assignment-3130931
+DTSTART;VALUE=DATE;VALUE=DATE:20230328
+CLASS:PUBLIC
+DESCRIPTION:All\,\n\nYou can submit your UML diagram (sprint four deliverab
+ le) here.\n\nMT
+SEQUENCE:0
+SUMMARY:UML diagram submission [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=03&year=2023#assignment_3130931
+X-ALT-DESC;FMTTYPE=text/html:<p>All\,</p>\n<p>You can submit your UML diagr
+ am (sprint four deliverable) here.</p>\n<p>MT</p><script src="https://inst
+ ructure-uploads.s3.amazonaws.com/account_23860000000000001/attachments/267
+ 65423/canvas_global_app.js"></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230331T175200Z
 UID:event-assignment-3082796
 DTSTART:20230329T211500Z
 DTEND:20230329T211500Z
@@ -1344,15 +721,103 @@ URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
 X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230308T181000Z
-UID:event-assignment-3082797
-DTSTART:20230405T211500Z
-DTEND:20230405T211500Z
+DTSTAMP:20230404T144500Z
+UID:event-assignment-3131037
+DTSTART;VALUE=DATE;VALUE=DATE:20230329
 CLASS:PUBLIC
+DESCRIPTION:Please submit a copy of your sprint four presentation slides.\n
+ \n 
 SEQUENCE:0
-SUMMARY:Lab 9 [EE 224]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
- nth=04&year=2023#assignment_3082797
+SUMMARY:Sprint four presentation [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=03&year=2023#assignment_3131037
+X-ALT-DESC;FMTTYPE=text/html:<p>Please submit a copy of your sprint four pr
+ esentation slides.</p>\n<p>&nbsp\;</p><script src="https://instructure-upl
+ oads.s3.amazonaws.com/account_23860000000000001/attachments/26765423/canva
+ s_global_app.js"></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230330T130000Z
+UID:event-assignment-3065520
+DTSTART;VALUE=DATE;VALUE=DATE:20230330
+CLASS:PUBLIC
+DESCRIPTION:P4.61\, P4.62\, P4.63\, P4.64\, P4.65\, P4.66
+SEQUENCE:0
+SUMMARY:HW 8 [EE 223]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
+ nth=03&year=2023#assignment_3065520
+X-ALT-DESC;FMTTYPE=text/html:<p><span>P4.61\, P4.62\, P4.63\, P4.64\, P4.65
+ \, P4.66</span></p><script src="https://instructure-uploads.s3.amazonaws.c
+ om/account_23860000000000001/attachments/26765423/canvas_global_app.js"></
+ script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230327T203900Z
+UID:event-assignment-3130967
+DTSTART;VALUE=DATE;VALUE=DATE:20230401
+CLASS:PUBLIC
+DESCRIPTION:All\n\nIt is time to evaluate your teammates and yourself for s
+ print three and four.  use the following form and submit your evaluation 
+ by Saturday April 1st.\n\n[peer evaluation iteration-1.docx] (https://erau
+ .instructure.com/courses/154299/files/33979602?wrap=1) 
+SEQUENCE:0
+SUMMARY:Peer evaluation sprint 3 & 4 [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=04&year=2023#assignment_3130967
+X-ALT-DESC;FMTTYPE=text/html:<p>All</p>\n<p>It is time to evaluate your tea
+ mmates and yourself for sprint three and four.&nbsp\; use the following fo
+ rm and submit your evaluation by Saturday April 1st.</p>\n<p><span style="
+ font-size: 18pt\;"><a class="instructure_file_link instructure_scribd_file
+  inline_disabled" title="peer evaluation iteration-1.docx" href="https://e
+ rau.instructure.com/courses/154299/files/33979602?wrap=1" target="_blank" 
+ data-canvas-previewable="false" data-api-endpoint="https://erau.instructur
+ e.com/api/v1/courses/154299/files/33979602" data-api-returntype="File">pee
+ r evaluation iteration-1.docx</a>&nbsp\;</span></p><script src="https://in
+ structure-uploads.s3.amazonaws.com/account_23860000000000001/attachments/2
+ 6765423/canvas_global_app.js"></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230403T173200Z
+UID:event-assignment-3065532
+DTSTART;VALUE=DATE;VALUE=DATE:20230404
+CLASS:PUBLIC
+DESCRIPTION:
+SEQUENCE:0
+SUMMARY:Exam 2 [EE 223]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
+ nth=04&year=2023#assignment_3065532
+X-ALT-DESC;FMTTYPE=text/html:
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230327T184200Z
+UID:event-assignment-3130934
+DTSTART;VALUE=DATE;VALUE=DATE:20230407
+CLASS:PUBLIC
+DESCRIPTION:You can submit your initial draft of software development docum
+ ent (sprint 5 deliverable) here.  By the end of the sprint five you shoul
+ d have the following sections (as a minimum)\n\n \n\n1.  Completed chapt
+ er one\n\n2. Almost completed sections (2.1\, 2.2\, 2.3\, 2.4) and draft o
+ f sections (2.5 and 2.6)\n\n3. Almost completed sections (3.2\, 3.3)\, and
+  draft of section 3.1\n\n4. Almost completed chapter 4\n\n5. Almost comple
+ te section 5.1 and draft of section 5.2\n\nMake sure you reach out to me o
+ r the your TA if you have any question about the content that need to be p
+ resented in your document.\n\nMT\n\n 
+SEQUENCE:0
+SUMMARY:Software Development Document (initial draft) [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=04&year=2023#assignment_3130934
+X-ALT-DESC;FMTTYPE=text/html:<p>You can submit your initial draft of softwa
+ re development document (sprint 5 deliverable) here.&nbsp\; By the end of 
+ the sprint five you should have the following sections (as a minimum)</p>\
+ n<p>&nbsp\;</p>\n<p>1.&nbsp\; Completed chapter one</p>\n<p>2. Almost comp
+ leted sections (2.1\, 2.2\, 2.3\, 2.4) and draft of sections (2.5 and 2.6)
+ </p>\n<p>3. Almost completed sections (3.2\, 3.3)\, and draft of section 3
+ .1</p>\n<p>4. Almost completed chapter 4</p>\n<p>5. Almost complete sectio
+ n 5.1 and draft of section 5.2</p>\n<p>Make sure you reach out to me or th
+ e your TA if you have any question about the content that need to be prese
+ nted in your document.</p>\n<p>MT</p>\n<p>&nbsp\;</p><script src="https://
+ instructure-uploads.s3.amazonaws.com/account_23860000000000001/attachments
+ /26765423/canvas_global_app.js"></script>
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230108T185100Z
@@ -1651,15 +1116,28 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230308T181000Z
-UID:event-assignment-3082799
+DTSTAMP:20230331T162400Z
+UID:event-assignment-3135758
+DTSTART:20230411T211500Z
+DTEND:20230411T211500Z
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:QUIZ [EE 224]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
+ nth=04&year=2023#assignment_3135758
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230331T161800Z
+UID:event-assignment-3082797
 DTSTART:20230412T211500Z
 DTEND:20230412T211500Z
 CLASS:PUBLIC
+DESCRIPTION:
 SEQUENCE:0
-SUMMARY:Lab 10 [EE 224]
+SUMMARY:Lab 9 [EE 224]
 URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
- nth=04&year=2023#assignment_3082799
+ nth=04&year=2023#assignment_3082797
+X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230108T185100Z
@@ -1956,6 +1434,19 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  out.</span></p>\n</div><script src="https://instructure-uploads.s3.amazona
  ws.com/account_23860000000000001/attachments/26765423/canvas_global_app.js
  "></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230331T162000Z
+UID:event-assignment-3082799
+DTSTART:20230419T211500Z
+DTEND:20230419T211500Z
+CLASS:PUBLIC
+DESCRIPTION:
+SEQUENCE:0
+SUMMARY:Lab 10 [EE 224]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
+ nth=04&year=2023#assignment_3082799
+X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230108T185100Z
