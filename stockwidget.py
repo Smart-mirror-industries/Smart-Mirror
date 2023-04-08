@@ -55,7 +55,7 @@ class StockWidget(QLabel):
         self.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(3000, 100) # Slowly increase until all text is visible
+        self.setGeometry(0,0,1740,40) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command

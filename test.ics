@@ -6,47 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Ryan Flinchum Calendar (Canvas)
 X-WR-CALDESC:Calendar events for the user\, Ryan Flinchum
 BEGIN:VEVENT
-DTSTAMP:20230303T194400Z
-UID:event-assignment-3060240
-DTSTART;VALUE=DATE;VALUE=DATE:20230306
-CLASS:PUBLIC
-DESCRIPTION:Upload your report here
-SEQUENCE:0
-SUMMARY:Midterm Report [EE 505]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154282&mo
- nth=03&year=2023#assignment_3060240
-X-ALT-DESC;FMTTYPE=text/html:<p>Upload your report here</p><script src="htt
- ps://instructure-uploads.s3.amazonaws.com/account_23860000000000001/attach
- ments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230228T205900Z
-UID:event-assignment-3065517
-DTSTART;VALUE=DATE;VALUE=DATE:20230307
-CLASS:PUBLIC
-DESCRIPTION:P3.12\, P3.14\, P3.24\, P3.25
-SEQUENCE:0
-SUMMARY:HW 6 [EE 223]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
- nth=03&year=2023#assignment_3065517
-X-ALT-DESC;FMTTYPE=text/html:<p>P3.12\, P3.14\, P3.24\, P3.25</p><script sr
- c="https://instructure-uploads.s3.amazonaws.com/account_23860000000000001/
- attachments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230328T120300Z
-UID:event-assignment-3082793
-DTSTART:20230308T221500Z
-DTEND:20230308T221500Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Lab 6  [EE 224]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
- nth=03&year=2023#assignment_3082793
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
 DTSTAMP:20230309T213800Z
 UID:event-assignment-3065526
 DTSTART;VALUE=DATE;VALUE=DATE:20230309
