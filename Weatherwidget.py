@@ -3,13 +3,14 @@ import datetime
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor, QPixmap
 from PyQt6.QtWidgets import QLabel
+fontsize = 2
 
 class weatherwidget(QLabel):
     def __init__(self, parent=None):
         super().__init__(parent)
-
+        
         # sets the font size, font, and color (** must be white to show on black mainwindow **)
-        self.setStyleSheet("font: 15pt Arial; color: white")
+        self.setStyleSheet("font: 25pt Arial; color: white")
 
         # sets the size of the label so all the text can be seen
         self.setMinimumSize(250, 750) # Slowly increase until all text is visible
@@ -47,7 +48,7 @@ class weatherwidget(QLabel):
         #text = (f"Date: {date1} \nLow: {low1} \nHigh: {high1}\n Description: {descrip1}\n")
         #text = (f"<html><body>Date: {date1}<br>" )
         #Current_temp = 
-        text = (f"<html><body>{date1}<br>Currently {current1}<br>H: {high1}<br>L: {low1}<br><img src='./weathersprites/{descrip1}.png'/><br><br>{date2}<br>H: {high2}<br>L: {low2}<br><img src='./weathersprites/{descrip2}.png'/><br><br>{date3}<br>H: {high3}<br>L: {low3}<br><img src='./weathersprites/{descrip3}.png'/></body></html>")
+        text = (f"<font size='2'><html><body>{date1}<br><font size='4'>{current1}<br><font size='2'>H: {high1} L: {low1}<br><img src='./weathersprites/{descrip1}.png'/><br><br>{date2}<br>H: {high2} L: {low2}<br><img src='./weathersprites/{descrip2}.png'/><br><br>{date3}<br>H: {high3} L: {low3}<br><img src='./weathersprites/{descrip3}.png'/></body></html>")
         #{date2}<br>Low: {low2}<br>High: {high2}<br><img src='./weathersprites/{descrip2}.png'/>
         #<br><br>{date3}<br>Low: {low3}<br>High: {high3}<br><img src='./weathersprites/{descrip3}.png'/>
         self.resize(pixmap1.width(), pixmap1.height())
