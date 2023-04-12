@@ -52,7 +52,7 @@ class weatherwidget(QLabel):
         self.resize(pixmap3.width(), pixmap3.height())
 
         self.setText(text)
-
+        self.setMouseTracking(True)
         # TODO: make it grab the following days, and report back.  This needs to not exceed some limit with the api so I can't test.
         
     
@@ -80,4 +80,13 @@ class weatherwidget(QLabel):
         lat = data[0]['lat'] #This should work just shoehorned in yeah?
         lon = data[0]['lon']
         return lat, lon
+    
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())
         

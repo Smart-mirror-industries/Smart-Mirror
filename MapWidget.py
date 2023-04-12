@@ -2,6 +2,7 @@
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6.QtWebEngineWidgets import QWebEngineView
+from PyQt6.QtCore import Qt
 
 
 
@@ -28,6 +29,7 @@ class MapWidget(QWidget):
         self.setLayout(vbox)
         #self.setGeometry(300, 300, 350, 250)
         self.show()
+        self.setMouseTracking(True)
 
     def loadPage(self):
 
@@ -36,3 +38,12 @@ class MapWidget(QWidget):
             #read html file and load the page
             html = f.read()
             self.webEngineView.setHtml(html)
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())

@@ -35,7 +35,7 @@ class TimeWidget(QLabel):
                 self.setFixedSize(750, 45)
             elif settings.textsize == 'medium':
                 self.setStyleSheet("font: 25pt Arial; color: white; background-color: black")
-                self.setFixedSize(450, 25)
+                self.setFixedSize(450, 30)
             elif settings.textsize == 'small':
                 self.setStyleSheet("font: 10pt Arial; color: white; background-color: black")
                 self.setFixedSize(200, 10) 
@@ -45,7 +45,7 @@ class TimeWidget(QLabel):
                 self.setFixedSize(750, 45)
             elif settings.textsize == 'medium':
                 self.setStyleSheet("font: 25pt Arial; color: black; background-color: white")
-                self.setFixedSize(450, 25)
+                self.setFixedSize(450, 30)
             elif settings.textsize == 'small':
                 self.setStyleSheet("font: 10pt Arial; color: black; background-color: white")
                 self.setFixedSize(200, 10) 
@@ -55,7 +55,7 @@ class TimeWidget(QLabel):
                 self.setFixedSize(750, 45)
             elif settings.textsize == 'medium':
                 self.setStyleSheet("font: 25pt Arial; color: black; background-color: gray")
-                self.setFixedSize(450, 25)
+                self.setFixedSize(450, 30)
             elif settings.textsize == 'small':
                 self.setStyleSheet("font: 10pt Arial; color: black; background-color: gray")
                 self.setFixedSize(200, 10) 
