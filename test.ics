@@ -6,59 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Ryan Flinchum Calendar (Canvas)
 X-WR-CALDESC:Calendar events for the user\, Ryan Flinchum
 BEGIN:VEVENT
-DTSTAMP:20230303T194400Z
-UID:event-assignment-3060240
-DTSTART;VALUE=DATE;VALUE=DATE:20230306
-CLASS:PUBLIC
-DESCRIPTION:Upload your report here
-SEQUENCE:0
-SUMMARY:Midterm Report [EE 505]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154282&mo
- nth=03&year=2023#assignment_3060240
-X-ALT-DESC;FMTTYPE=text/html:<p>Upload your report here</p><script src="htt
- ps://instructure-uploads.s3.amazonaws.com/account_23860000000000001/attach
- ments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230228T205900Z
-UID:event-assignment-3065517
-DTSTART;VALUE=DATE;VALUE=DATE:20230307
-CLASS:PUBLIC
-DESCRIPTION:P3.12\, P3.14\, P3.24\, P3.25
-SEQUENCE:0
-SUMMARY:HW 6 [EE 223]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
- nth=03&year=2023#assignment_3065517
-X-ALT-DESC;FMTTYPE=text/html:<p>P3.12\, P3.14\, P3.24\, P3.25</p><script sr
- c="https://instructure-uploads.s3.amazonaws.com/account_23860000000000001/
- attachments/26765423/canvas_global_app.js"></script>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230328T120300Z
-UID:event-assignment-3082793
-DTSTART:20230308T221500Z
-DTEND:20230308T221500Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Lab 6  [EE 224]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
- nth=03&year=2023#assignment_3082793
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230309T213800Z
-UID:event-assignment-3065526
-DTSTART;VALUE=DATE;VALUE=DATE:20230309
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Quiz 4 [EE 223]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
- nth=03&year=2023#assignment_3065526
-X-ALT-DESC;FMTTYPE=text/html:
-END:VEVENT
-BEGIN:VEVENT
 DTSTAMP:20230108T185100Z
 UID:event-assignment-3050955
 DTSTART;VALUE=DATE;VALUE=DATE:20230312
@@ -777,7 +724,7 @@ X-ALT-DESC;FMTTYPE=text/html:<p>All</p>\n<p>It is time to evaluate your tea
  6765423/canvas_global_app.js"></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230403T173200Z
+DTSTAMP:20230410T155500Z
 UID:event-assignment-3065532
 DTSTART;VALUE=DATE;VALUE=DATE:20230404
 CLASS:PUBLIC
@@ -1116,10 +1063,10 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230331T162400Z
+DTSTAMP:20230411T140200Z
 UID:event-assignment-3135758
-DTSTART:20230411T211500Z
-DTEND:20230411T211500Z
+DTSTART:20230412T210000Z
+DTEND:20230412T210000Z
 CLASS:PUBLIC
 SEQUENCE:0
 SUMMARY:QUIZ [EE 224]
@@ -1138,6 +1085,20 @@ SUMMARY:Lab 9 [EE 224]
 URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
  nth=04&year=2023#assignment_3082797
 X-ALT-DESC;FMTTYPE=text/html:
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230410T151900Z
+UID:event-assignment-3065521
+DTSTART;VALUE=DATE;VALUE=DATE:20230413
+CLASS:PUBLIC
+DESCRIPTION:P5.6\, P5.25\, P5.35\, P5.36\, P5.45
+SEQUENCE:0
+SUMMARY:HW 9 [EE 223]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
+ nth=04&year=2023#assignment_3065521
+X-ALT-DESC;FMTTYPE=text/html:<p>P5.6\, P5.25\, P5.35\, P5.36\, P5.45</p><sc
+ ript src="https://instructure-uploads.s3.amazonaws.com/account_23860000000
+ 000001/attachments/26765423/canvas_global_app.js"></script>
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230108T185100Z
@@ -1743,6 +1704,18 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  out.</span></p>\n</div><script src="https://instructure-uploads.s3.amazona
  ws.com/account_23860000000000001/attachments/26765423/canvas_global_app.js
  "></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230410T144000Z
+UID:event-assignment-3065533
+DTSTART;VALUE=DATE;VALUE=DATE:20230427
+CLASS:PUBLIC
+DESCRIPTION:
+SEQUENCE:0
+SUMMARY:Exam 3 [EE 223]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
+ nth=04&year=2023#assignment_3065533
+X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230104T181400Z
