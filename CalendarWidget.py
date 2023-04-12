@@ -11,17 +11,13 @@ class CalendarWidget(QWidget):
     def __init__(self, parent=None):
         super(CalendarWidget, self).__init__(parent)
         
-        self.label = QLabel(self)
-        self.label.setText('test')
-        self.setStyleSheet("color: white;")
-
-        self.label.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)") # set a background color for the label
+       # set a background color for the label
         #self.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
         # Create an instance of the Ui_Form class
         self.ui = Ui_Form()
         #self.setMinimumSize(250, 700)
         # Call the setupUi() method and pass the current instance of MyForm as an argument
-        
+        self.addLabel()
         self.setCalendar()
         #print(calendarDates)
         self.ui.setupUi(self)
@@ -34,6 +30,12 @@ class CalendarWidget(QWidget):
         self.timer.timeout.connect(self.getCalendarEvents) #connects the timer to the showTime def (function)
         self.timer.start(1000) # update every 8 ms = 120Hz
         #self.getCalendarEvents() # runs showTime initially to get rid of delay at program start
+    def addLabel(self):
+        self.label = QLabel(self)
+        self.label.setText('test')
+        self.setStyleSheet("color: white;")
+
+        self.label.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
 
     def getCalendarEvents(self):
         
