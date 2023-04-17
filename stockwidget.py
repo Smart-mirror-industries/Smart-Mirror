@@ -18,8 +18,8 @@ from PyQt6.QtWidgets import QLabel
 #global xpos
 #xpos = 0
 
-#global oldtext
-#oldtext = 'test'
+global oldprice
+oldprice = 0
 
 # This class uses the label widget of PyQt6
 class StockWidget(QLabel):
@@ -64,10 +64,7 @@ class StockWidget(QLabel):
     
 
     def updateStock(self):
-        
-        #global oldtext
-
-        
+        global oldprice
         yf_info = yf(self.getticker())     
         #Put data into dataframe
         data_formatted = pd.json_normalize(yf_info.financial_data)
@@ -75,4 +72,14 @@ class StockWidget(QLabel):
         self.setText(str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))) 
         self.update()
         #self.setIndent(self.getx())
+        if data_formatted[self.getticker() + '.currentPrice'].iloc[-1]>oldprice:
+            
+            self.setStyleSheet("font: 25pt Arial; color: green; background-color: rgba(255, 255, 255, 0)")
+        else:
+            self.setStyleSheet("font: 25pt Arial; color: red; background-color: rgba(255, 255, 255, 0)")
+        #print(oldprice)
+        #print("OLDPRICE^")
+
+
+        oldprice = data_formatted[self.getticker() + '.currentPrice'].iloc[-1]
     

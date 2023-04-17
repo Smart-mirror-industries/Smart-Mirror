@@ -55,10 +55,9 @@ class StockScroller(QWidget):
         ogoffset = offset
         print(ogoffset)
 
-        #if (xpos == 3000):
-        #    xpos = 0
-        #    for i in range(len(self.objs)):
-        #        self.objs[i].updateStock()
+        if (xpos == 3000):
+            for i in range(len(self.objs)):
+                self.objs[i].updateStock()
 
         ended = 0
         for i in range(len(self.objs)):
