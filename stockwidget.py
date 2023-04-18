@@ -60,7 +60,7 @@ class StockWidget(QLabel):
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
         
-        self.move(-500,0)           
+        self.move(0,0)           
     
 
     def updateStock(self):

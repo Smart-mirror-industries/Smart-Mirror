@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 from yahooquery import Ticker as yf
-from PyQt6.QtCore import QDateTime, QTimer, Qt
+from PyQt6.QtCore import QDateTime, QTimer, Qt, QPropertyAnimation
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
 
@@ -45,39 +45,22 @@ class StockScroller(QWidget):
         self.timer = QTimer(self) # makes a timer
         
         self.timer.timeout.connect(self.scrollStocks) #connects the timer to the showTime def (function)
-        self.timer.start(8) # update every 8 ms = 120Hz
+        self.timer.start(10000) # update every 8 ms = 120Hz
         self.scrollStocks() # runs showTime initially to get rid of delay at program start
-        
+
+    def printstuff(self):
+        for i in range(len(self.objs)):
+            print(self.objs[i].getx()) 
     def scrollStocks(self):
         global xpos
         global offset
-        
-        ogoffset = offset
-        print(ogoffset)
-
-        if (xpos == 3000):
-            for i in range(len(self.objs)):
-                self.objs[i].updateStock()
-
-        ended = 0
+        self.anms = list()
         for i in range(len(self.objs)):
+            self.anms.append(QPropertyAnimation(self.objs[i], b'geometry'))
+            self.anms[i].setDuration(5000)
+            self.anms[i].setStartValue(self.objs[i].geometry().translated(0,0))
+            self.anms[i].setEndValue(self.objs[i].geometry().translated(2000,0))
+            self.anms[i].start()
             #If ticker is within boundary set new indent
-            if(xpos +self.objs[i].getx() <3000):
-                self.objs[i].setIndent(xpos)   
-                #print(xpos)
-            else: # If the Ticker has exceeded the boundary, move the ticker to be the next loopback 
-                #if (ended == 0):
-                self.objs[i].move(offset,0)
-                offset = offset - (self.objs[i].fontMetrics().horizontalAdvance(self.objs[i].text())*2+100)
-                ended= ended + 1
-                print("Current offset: %d \t Current Ticker: %s", offset, self.objs[i].text())
-                if(ended==(len(self.objs)-1)): # If the last ticker has exceeded boundary, reset xposition
-                    xpos = 0
-                    print(ended)
-                #else:
-                    
-                    
-            
-        offset = ogoffset
-        xpos +=5
-        #self.timer.stop()
+            #if(xpos +self.objs[i].getx() <3000):
+            #    self.objs[i].setIndent(xpos)   
