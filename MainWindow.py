@@ -27,8 +27,8 @@ class MainWindow(QMainWindow):
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)
 
-        self.weather_widget = weatherwidget(self)
-        self.moveWeatherWidget(75,200)
+        #self.weather_widget = weatherwidget(self)
+        #self.moveWeatherWidget(75,200)
 
         
         self.stock_scroller.move(-200, 50)
@@ -41,13 +41,14 @@ class MainWindow(QMainWindow):
         #self.moveStockWidget(0, 0)
 
 
-        map_widget = MapWidget(self)
-        map_widget.setMinimumSize(600, 500)
-        map_widget.move(700, 200)
+        #map_widget = MapWidget(self)
+        #map_widget.setMinimumSize(600, 500)
+        #map_widget.move(700, 200)
         
 
         self.reminderwidget = reminderwidget(self)
-        self.movereminderwidget(900,700)
+        self.movereminderwidget(75,200)
+        self.reminderwidget.setMinimumSize(400,400)
 
         #Create the x widget and add it to the main window
         
