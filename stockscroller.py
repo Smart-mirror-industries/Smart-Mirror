@@ -4,7 +4,7 @@ from yahooquery import Ticker as yf
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
-
+from PyQt6.QtOpenGLWidgets import QOpenGLWidget
 from stockwidget import StockWidget
 from PyQt6.QtWidgets import QMainWindow, QWidget
 #import threading
@@ -17,7 +17,7 @@ global offset
 offset = 0
 
 
-class StockScroller(QWidget):
+class StockScroller(QOpenGLWidget):
     def __init__(self,parent):
         super(StockScroller,self).__init__(parent)
 

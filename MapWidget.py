@@ -2,10 +2,11 @@
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6.QtWebEngineWidgets import QWebEngineView
+from PyQt6.QtOpenGLWidgets import QOpenGLWidget
 
 
 
-class MapWidget(QWidget):
+class MapWidget(QOpenGLWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)

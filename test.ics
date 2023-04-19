@@ -440,7 +440,7 @@ URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
 X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230327T184200Z
+DTSTAMP:20230417T225100Z
 UID:event-assignment-3130934
 DTSTART;VALUE=DATE;VALUE=DATE:20230407
 CLASS:PUBLIC
@@ -1101,6 +1101,46 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
+DTSTAMP:20230418T210000Z
+UID:event-assignment-3138055
+DTSTART:20230419T210000Z
+DTEND:20230419T210000Z
+CLASS:PUBLIC
+DESCRIPTION:Some questions have single choice answers and others have multi
+ ple choice answers in which more than one answer might or might not be cor
+ rect. Answer accordingly.\n\nWHEN YOU CLICK THE SUBMIT BUTTON\, YOU MIGHT 
+ GET A MESSAGE  SAYING THAT THERE IS ONE QUESTION THAT IS STILL UNANSWERED
+  EVEN THOUGH YOU HAVE ANSWERED IT. JUST MAKE SURE THAT YOU HAVE FILLED YOU
+ R ANSWER AND CLICK SUBMIT ANYWAY. IT WILL STILL BE COUNTED.\n\nThe exam wi
+ ll be available between 04/18 Tuesday 5:00 PM until 04/19 Wednesday 05:00 
+ PM. Make sure you start at least 75 minutes before 04/19 Wednesday 05:00 P
+ M\, or you won't have enough time to finish it. Answers will be available 
+ on Wednesday 05:00 PM.\n\nYou have 75 minutes to complete the exam.\n\nTh
+ e exam is open book but don't waste your time looking up everything.\n\nCo
+ llaboration is not allowed.\n\nGood luck :)
+SEQUENCE:0
+SUMMARY:Final Exam [EE 224]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
+ nth=04&year=2023#assignment_3138055
+X-ALT-DESC;FMTTYPE=text/html:<p><strong><span>Some questions have single ch
+ oice answers and others have multiple choice answers in which more than on
+ e answer might or might not be correct. Answer accordingly.</span></strong
+ ></p>\n<p><span style="color: #e03e2d\;"><strong>WHEN YOU CLICK THE SUBMIT
+  BUTTON\, YOU MIGHT GET A MESSAGE&nbsp\; SAYING THAT THERE IS ONE QUESTION
+  THAT IS STILL UNANSWERED EVEN THOUGH YOU HAVE ANSWERED IT. JUST MAKE SURE
+  THAT YOU HAVE FILLED YOUR ANSWER AND CLICK SUBMIT ANYWAY. IT WILL STILL B
+ E COUNTED.</strong></span></p>\n<p>The exam will be available between <str
+ ong>04/18 Tuesday 5:00 PM until 04/19 Wednesday 05:00 PM</strong>. <span>M
+ ake sure you start at least 75 minutes before 04/19 Wednesday 05:00 PM\, o
+ r you won't have enough time to finish it.</span> Answers will be availabl
+ e on Wednesday 05:00 PM.</p>\n<p>You have <strong>75</strong>&nbsp\;minute
+ s to complete the exam.</p>\n<p>The exam is open book but don't waste your
+  time looking up everything.</p>\n<p>Collaboration is not allowed.</p>\n<p
+ >Good luck :)</p><script src="https://instructure-uploads.s3.amazonaws.com
+ /account_23860000000000001/attachments/26765423/canvas_global_app.js"></sc
+ ript>
+END:VEVENT
+BEGIN:VEVENT
 DTSTAMP:20230331T162000Z
 UID:event-assignment-3082799
 DTSTART:20230419T211500Z
@@ -1436,6 +1476,43 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
+DTSTAMP:20230417T214200Z
+UID:event-assignment-3150717
+DTSTART;VALUE=DATE;VALUE=DATE:20230426
+CLASS:PUBLIC
+DESCRIPTION:As we discussed before\, Each team will have about 15 minutes t
+ o present their project.  Use the attached rubric to plan your presentati
+ on.  You need to include a two or three minutes video demonstrating your 
+ software in action\, as part of your presentation.  Finally submit your p
+ resentation slides by no later than April 26th.\n\nThese presentations wil
+ l be conducted on the following dates\n\nApril 19 two teams (Fitness track
+ er\, and Traffic)\n\nApril 24 six teams\n\nApril 26 five teams\n\nI will a
+ nnounce which teams are presenting on 24th and 26th shortly.\n\n[Oral-pres
+ entation assessment.docx] (https://erau.instructure.com/courses/154299/fil
+ es/34237594?wrap=1) 
+SEQUENCE:0
+SUMMARY:Final Project Presentation [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=04&year=2023#assignment_3150717
+X-ALT-DESC;FMTTYPE=text/html:<p>As we discussed before\, Each team will hav
+ e about 15 minutes to present their project.&nbsp\; Use the attached rubri
+ c to plan your presentation.&nbsp\; You need to include a two or three min
+ utes video demonstrating your software in action\, as part of your present
+ ation.&nbsp\; Finally submit your presentation slides by no later than Apr
+ il 26th.</p>\n<p>These presentations will be conducted on the following da
+ tes</p>\n<p>April 19 two teams (Fitness tracker\, and Traffic)</p>\n<p>Apr
+ il 24 six teams</p>\n<p>April 26 five teams</p>\n<p>I will announce which 
+ teams are presenting on 24th and 26th shortly.</p>\n<p><strong><span style
+ ="font-size: 18pt\;"><a class="instructure_file_link instructure_scribd_fi
+ le inline_disabled" title="Oral-presentation assessment.docx" href="https:
+ //erau.instructure.com/courses/154299/files/34237594?wrap=1" target="_blan
+ k" data-canvas-previewable="false" data-api-endpoint="https://erau.instruc
+ ture.com/api/v1/courses/154299/files/34237594" data-api-returntype="File">
+ Oral-presentation assessment.docx</a>&nbsp\;</span></strong></p><script sr
+ c="https://instructure-uploads.s3.amazonaws.com/account_23860000000000001/
+ attachments/26765423/canvas_global_app.js"></script>
+END:VEVENT
+BEGIN:VEVENT
 DTSTAMP:20230410T144000Z
 UID:event-assignment-3065533
 DTSTART;VALUE=DATE;VALUE=DATE:20230427
@@ -1742,5 +1819,74 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  out.</span></p>\n</div><script src="https://instructure-uploads.s3.amazona
  ws.com/account_23860000000000001/attachments/26765423/canvas_global_app.js
  "></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230417T142600Z
+UID:event-assignment-3150706
+DTSTART;VALUE=DATE;VALUE=DATE:20230428
+CLASS:PUBLIC
+DESCRIPTION:Make sure you address all the comments you received on your dra
+ ft document \, and update the sections accordingly since your submission o
+ f initial draft document.  PLEASE use track changes on the document\, so 
+ we know what has been changed and updated\, failure to do so may cause us 
+ to miss some of your improvements and may result in to a lower grade.
+SEQUENCE:0
+SUMMARY:Software Design Document (Final submission) [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=04&year=2023#assignment_3150706
+X-ALT-DESC;FMTTYPE=text/html:<p>Make sure you address all the comments you 
+ received on your draft document \, and update the sections accordingly sin
+ ce your submission of initial draft document.&nbsp\; PLEASE use track chan
+ ges on the document\, so we know what has been changed and updated\, failu
+ re to do so may cause us to miss some of your improvements and may result 
+ in to a lower grade.</p><script src="https://instructure-uploads.s3.amazon
+ aws.com/account_23860000000000001/attachments/26765423/canvas_global_app.j
+ s"></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230417T142900Z
+UID:event-assignment-3150709
+DTSTART;VALUE=DATE;VALUE=DATE:20230429
+CLASS:PUBLIC
+DESCRIPTION:Use the same evaluation templates that you have used up to now.
+   This is the final peer evaluation for your team.  Please complete the 
+ form and make sure you justify your evaluation with the comments.
+SEQUENCE:0
+SUMMARY:Final Peer Evaluation  [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=04&year=2023#assignment_3150709
+X-ALT-DESC;FMTTYPE=text/html:<p>Use the same evaluation templates that you 
+ have used up to now.&nbsp\; This is the final peer evaluation for your tea
+ m.&nbsp\; Please complete the form and make sure you justify your evaluati
+ on with the comments.</p><script src="https://instructure-uploads.s3.amazo
+ naws.com/account_23860000000000001/attachments/26765423/canvas_global_app.
+ js"></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230417T145800Z
+UID:event-assignment-3150721
+DTSTART;VALUE=DATE;VALUE=DATE:20230429
+CLASS:PUBLIC
+DESCRIPTION:This is not real money (bummer). \n\nUse the attached document
+  to distribute an imaginary $100\, between each member of your team.  Thi
+ s distribution should be a good representation of each member's contributi
+ on to the team.\n\n[Money distribution-1.docx] (https://erau.instructure.c
+ om/courses/154299/files/34237656?wrap=1) \n\n 
+SEQUENCE:0
+SUMMARY:Money distribution [SE 300]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154299&mo
+ nth=04&year=2023#assignment_3150721
+X-ALT-DESC;FMTTYPE=text/html:<p>This is not real money (bummer).&nbsp\;</p>
+ \n<p>Use the attached document to distribute an imaginary $100\, between e
+ ach member of your team.&nbsp\; This distribution should be a good represe
+ ntation of each member's contribution to the team.</p>\n<p><strong><span s
+ tyle="font-size: 18pt\;"><a class="instructure_file_link instructure_scrib
+ d_file inline_disabled" title="Money distribution-1.docx" href="https://er
+ au.instructure.com/courses/154299/files/34237656?wrap=1" target="_blank" d
+ ata-canvas-previewable="false" data-api-endpoint="https://erau.instructure
+ .com/api/v1/courses/154299/files/34237656" data-api-returntype="File">Mone
+ y distribution-1.docx</a>&nbsp\;</span></strong></p>\n<p>&nbsp\;</p><scrip
+ t src="https://instructure-uploads.s3.amazonaws.com/account_23860000000000
+ 001/attachments/26765423/canvas_global_app.js"></script>
 END:VEVENT
 END:VCALENDAR
