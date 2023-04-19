@@ -15,17 +15,17 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Smart Mirror')
-        if settings.mainwindowcolor == 'black':
-            self.setStyleSheet("background-color: black;")
-        elif settings.mainwindowcolor == 'gray':
-            self.setStyleSheet("background-color: gray;")
-        elif settings.mainwindowcolor == 'white':
-            self.setStyleSheet("background-color: white;")
+        self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
 
         self.showhideThemesButton = QPushButton('Toggle Theme Selector', self)
         self.showhideThemesButton.setStyleSheet("font: 15pt Arial; color: white; background-color: black")
         self.showhideThemesButton.setGeometry(1300, 820, 225, 50)
         self.showhideThemesButton.clicked.connect(self.toggle_ThemeSelector)
+        # makes a timer to update the theme colors for mainwindow and the theme selector push button
+        self.updateMainWindowColorAndThemeButtonColortimer = QTimer(self) # makes a timer
+        self.updateMainWindowColorAndThemeButtonColortimer.timeout.connect(self.updateMainWindowColorAndThemeButtonColor) #connects the timer to the updateMainWindowColorAndThemeButtonColor def (function)
+        self.updateMainWindowColorAndThemeButtonColortimer.start(1000) # 1000ms = 1 second
+        self.updateMainWindowColorAndThemeButtonColor() # runs updateMainWindowColorAndThemeButtonColor initially to get rid of delay at program start
 
         self.theme_widget = ThemeWidget(self)
         self.theme_widget.move(1300,620)
@@ -53,13 +53,10 @@ class MainWindow(QMainWindow):
         elif settings.themewindowswitcher == 0:
             self.theme_widget.show()
             settings.themewindowswitcher = 1
-        self.updateMainWindowColor()
 
-    def updateMainWindowColor(self):
-        if settings.mainwindowcolor == 'black':
-            self.setStyleSheet("background-color: black;")
-        elif settings.mainwindowcolor == 'gray':
-            self.setStyleSheet("background-color: gray;")
-        elif settings.mainwindowcolor == 'white':
-            self.setStyleSheet("background-color: white;")
+    def updateMainWindowColorAndThemeButtonColor(self):
+        self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
+        self.showhideThemesButton.setStyleSheet("font: 15pt Arial;color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+
+        
 

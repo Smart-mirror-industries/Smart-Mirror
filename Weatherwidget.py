@@ -3,13 +3,14 @@ import datetime
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor, QPixmap
 from PyQt6.QtWidgets import QLabel
+import settings
 
 class weatherwidget(QLabel):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        # sets the font size, font, and color (** must be white to show on black mainwindow **)
-        self.setStyleSheet("font: 25pt Arial; color: white")
+        # # sets the font size, font, and color (** must be white to show on black mainwindow **)
+        # self.setStyleSheet("font: 25pt Arial; color: white")
 
         # sets the size of the label so all the text can be seen
         self.setMinimumSize(250, 700) # Slowly increase until all text is visible
@@ -23,6 +24,15 @@ class weatherwidget(QLabel):
         self.timer.timeout.connect(self.Showreport) #connects the timer to the showTime def (function)
         self.timer.start(43200000) # 43200000 = 12 hours, Definetly shouldn't be abusing any API with this.
         self.Showreport() # runs showTime initially to get rid of delay at program start
+
+        #make a time to update the theme every second
+        self.drawtimer = QTimer(self) # makes a timer
+        self.drawtimer.timeout.connect(self.updateTheme) #connects the timer to the showTime def (function)
+        self.drawtimer.start(1000) # every 1 second
+        self.updateTheme() # runs updatetheme initially to get rid of delay at program start
+
+    def updateTheme(self):
+        self.setStyleSheet("font: 25pt Arial; background-color: {}; color: {};".format(settings.colorthemebackground, settings.colorthemetext))
 
     # function that "re-draws" the widget so it displays every 12 hours
     def Showreport(self):
