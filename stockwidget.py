@@ -70,7 +70,12 @@ class StockWidget(QLabel):
         self.updateTheme() # runs updateTheme initially to get rid of delay at program start
     
     def updateTheme(self):
-        self.setStyleSheet("font: 25pt Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(settings.colorthemetext))
+        if settings.textsize == 'large':
+            self.setStyleSheet("font: {}px Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(40, settings.colorthemetext))
+        if settings.textsize == 'medium':
+            self.setStyleSheet("font: {}px Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(30, settings.colorthemetext))
+        if settings.textsize == 'small':
+            self.setStyleSheet("font: {}px Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(15, settings.colorthemetext))
 
     def updateStock(self):
         
