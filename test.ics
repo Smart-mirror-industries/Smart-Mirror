@@ -1101,15 +1101,44 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230417T192400Z
+DTSTAMP:20230418T210000Z
 UID:event-assignment-3138055
 DTSTART:20230419T210000Z
 DTEND:20230419T210000Z
 CLASS:PUBLIC
+DESCRIPTION:Some questions have single choice answers and others have multi
+ ple choice answers in which more than one answer might or might not be cor
+ rect. Answer accordingly.\n\nWHEN YOU CLICK THE SUBMIT BUTTON\, YOU MIGHT 
+ GET A MESSAGE  SAYING THAT THERE IS ONE QUESTION THAT IS STILL UNANSWERED
+  EVEN THOUGH YOU HAVE ANSWERED IT. JUST MAKE SURE THAT YOU HAVE FILLED YOU
+ R ANSWER AND CLICK SUBMIT ANYWAY. IT WILL STILL BE COUNTED.\n\nThe exam wi
+ ll be available between 04/18 Tuesday 5:00 PM until 04/19 Wednesday 05:00 
+ PM. Make sure you start at least 75 minutes before 04/19 Wednesday 05:00 P
+ M\, or you won't have enough time to finish it. Answers will be available 
+ on Wednesday 05:00 PM.\n\nYou have 75 minutes to complete the exam.\n\nTh
+ e exam is open book but don't waste your time looking up everything.\n\nCo
+ llaboration is not allowed.\n\nGood luck :)
 SEQUENCE:0
 SUMMARY:Final Exam [EE 224]
 URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
  nth=04&year=2023#assignment_3138055
+X-ALT-DESC;FMTTYPE=text/html:<p><strong><span>Some questions have single ch
+ oice answers and others have multiple choice answers in which more than on
+ e answer might or might not be correct. Answer accordingly.</span></strong
+ ></p>\n<p><span style="color: #e03e2d\;"><strong>WHEN YOU CLICK THE SUBMIT
+  BUTTON\, YOU MIGHT GET A MESSAGE&nbsp\; SAYING THAT THERE IS ONE QUESTION
+  THAT IS STILL UNANSWERED EVEN THOUGH YOU HAVE ANSWERED IT. JUST MAKE SURE
+  THAT YOU HAVE FILLED YOUR ANSWER AND CLICK SUBMIT ANYWAY. IT WILL STILL B
+ E COUNTED.</strong></span></p>\n<p>The exam will be available between <str
+ ong>04/18 Tuesday 5:00 PM until 04/19 Wednesday 05:00 PM</strong>. <span>M
+ ake sure you start at least 75 minutes before 04/19 Wednesday 05:00 PM\, o
+ r you won't have enough time to finish it.</span> Answers will be availabl
+ e on Wednesday 05:00 PM.</p>\n<p>You have <strong>75</strong>&nbsp\;minute
+ s to complete the exam.</p>\n<p>The exam is open book but don't waste your
+  time looking up everything.</p>\n<p>Collaboration is not allowed.</p>\n<p
+ >Good luck :)</p><script src="https://instructure-uploads.s3.amazonaws.com
+ /account_23860000000000001/attachments/26765423/canvas_global_app.js"></sc
+ ript>
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230331T162000Z

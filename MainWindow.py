@@ -1,7 +1,7 @@
 # import pyqt6 stuff
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel
-
+from PyQt6.QtOpenGLWidgets import QOpenGLWidget
 
 # import custom subclasses
 from timewidget import TimeWidget
