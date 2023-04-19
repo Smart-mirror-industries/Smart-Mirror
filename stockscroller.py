@@ -62,3 +62,13 @@ class StockScroller(QWidget):
     
         xpos = xpos + 3
         #self.timer.stop()
+
+        self.setMouseTracking(True)
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())

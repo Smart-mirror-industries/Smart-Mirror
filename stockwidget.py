@@ -4,6 +4,7 @@ from yahooquery import Ticker as yf
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
+import settings
 #import threading
 #import time
 #Assign Stocks of choice (Currently hardcoded)
@@ -51,8 +52,8 @@ class StockWidget(QLabel):
         #print(str(self.getticker() + "AAAAA: " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1])))
 
 
-        # sets the font size, font, and color (** must be white to show on black mainwindow **)
-        self.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
+        # sets the font size, font, and color (dont have to set background color because it is transparent, it matches the mainwindow color)
+        self.setStyleSheet("font: 25pt Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(settings.colorthemetext))
 
         # sets the size of the label so all the text can be seen
         self.setMinimumSize(3000, 100) # Slowly increase until all text is visible
@@ -61,7 +62,20 @@ class StockWidget(QLabel):
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
         
         self.move(-500,0)           
+
+        # makes a timer to update the theme every second
+        self.timer = QTimer(self) # makes a timer
+        self.timer.timeout.connect(self.updateTheme) #connects the timer to the updateTheme def (function)
+        self.timer.start(1000) # 1000ms = 1 second
+        self.updateTheme() # runs updateTheme initially to get rid of delay at program start
     
+    def updateTheme(self):
+        if settings.textsize == 'large':
+            self.setStyleSheet("font: {}px Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(40, settings.colorthemetext))
+        if settings.textsize == 'medium':
+            self.setStyleSheet("font: {}px Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(30, settings.colorthemetext))
+        if settings.textsize == 'small':
+            self.setStyleSheet("font: {}px Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(15, settings.colorthemetext))
 
     def updateStock(self):
         

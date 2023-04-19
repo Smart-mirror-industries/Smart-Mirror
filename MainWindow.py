@@ -1,66 +1,62 @@
 # import pyqt6 stuff
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel
-
+from PyQt6.QtCore import Qt, QTimer
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVBoxLayout, QLabel, QPushButton
+from PyQt6.QtGui import QMouseEvent
+import settings
 
 # import custom subclasses
 from timewidget import TimeWidget
 from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
 from MapWidget import MapWidget
+from ThemeWidget import ThemeWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        # Makes the main window and sets the background to black
         self.setWindowTitle('Smart Mirror')
-        self.setStyleSheet("background-color: black;")
+        self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
 
-        # Create the time widget and add it to the main window
+        self.showhideThemesButton = QPushButton('Toggle Theme Selector', self)
+        self.showhideThemesButton.setStyleSheet("font: 15pt Arial; color: white; background-color: black")
+        self.showhideThemesButton.setGeometry(1300, 820, 225, 50)
+        self.showhideThemesButton.clicked.connect(self.toggle_ThemeSelector)
+        # makes a timer to update the theme colors for mainwindow and the theme selector push button
+        self.updateMainWindowColorAndThemeButtonColortimer = QTimer(self) # makes a timer
+        self.updateMainWindowColorAndThemeButtonColortimer.timeout.connect(self.updateMainWindowColorAndThemeButtonColor) #connects the timer to the updateMainWindowColorAndThemeButtonColor def (function)
+        self.updateMainWindowColorAndThemeButtonColortimer.start(1000) # 1000ms = 1 second
+        self.updateMainWindowColorAndThemeButtonColor() # runs updateMainWindowColorAndThemeButtonColor initially to get rid of delay at program start
+
+        self.theme_widget = ThemeWidget(self)
+        self.theme_widget.move(1300,620)
+        self.theme_widget.setMinimumSize(200, 200)
+
         self.time_widget = TimeWidget(self)
-        self.moveTimeWidget(0, 100) #moves the timewidget using the unique def below
+        self.time_widget.move(450, 100)
+
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)
 
         self.weather_widget = weatherwidget(self)
-        self.moveWeatherWidget(75,200)
-
+        self.weather_widget.move(75,200)
         
         self.stock_scroller.move(-200, 50)
-        #self.stock_widget = StockWidget(self)
-        #self.stock_widget2 = StockWidget(self)
-        #self.stock_widget3 = StockWidget(self)
-        #self.stock_widget.setticker('DIS')
-        #self.stock_widget2.setticker('MSFT')
-        #self.stock_widget3.setticker('ZIM')
-        #self.moveStockWidget(0, 0)
 
         self.map_widget = MapWidget(self)
-        self.moveMapWidget(300,200)
+        self.map_widget.move(800,50)
         self.map_widget.setMinimumSize(500, 500)
+
+    def toggle_ThemeSelector(self):
+        if settings.themewindowswitcher == 1:
+            self.theme_widget.hide()
+            settings.themewindowswitcher = 0
+        elif settings.themewindowswitcher == 0:
+            self.theme_widget.show()
+            settings.themewindowswitcher = 1
+
+    def updateMainWindowColorAndThemeButtonColor(self):
+        self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
+        self.showhideThemesButton.setStyleSheet("font: 15pt Arial;color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+
         
-
-
-        #Create the x widget and add it to the main window
-        
-
-
-    # use this def to add any widget to the mainwindow
-    # do "self.widgetname = classname(self)" in the mainwindow constructor above
-    def addWidget(self, widget):
-        self.central_widget.layout().addWidget(widget) #adds the inputted widget to mainwindow (self)
-
-    # To move specific widgets, create a def per widget using moveTimeWidget as a template:
-
-    # moveTimeWidget is specifically for timewidget, each widget needs its own move def
-    def moveTimeWidget(self, x, y):
-        self.time_widget.move(x, y) # Moves the time widget to the specified position
-    # moveTimeWidget is specifically for timewidget, each widget needs its own move def
-    def moveStockWidget(self, x, y):
-        self.stock_widget.move(x, y) # Moves the time widget to the specified position
-    def moveWeatherWidget(self, x, y):
-        self.weather_widget.move(x, y) # Moves the time widget to the specified position
-    def moveMapWidget(self, x, y):
-        self.map_widget.move(x,y)
-
 
