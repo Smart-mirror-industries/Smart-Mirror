@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         self.theme_widget.setMinimumSize(200, 200)
 
         self.time_widget = TimeWidget(self)
-        self.time_widget.move(0, 100)
+        self.time_widget.move(450, 100)
 
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)

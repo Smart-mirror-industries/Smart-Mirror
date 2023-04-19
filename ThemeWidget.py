@@ -40,6 +40,7 @@ class ThemeWidget(QWidget):
         
     def update_colortheme(self, text):
         settings.colortheme = text
+        #changing the color theme of themewidget:
         if text == 'dark':
             self.colordropdown.setStyleSheet("color: white; background-color: black")
             self.textsizedropdown.setStyleSheet("color: white; background-color: black")
@@ -53,8 +54,24 @@ class ThemeWidget(QWidget):
             self.textsizedropdown.setStyleSheet("color: black; background-color: white")
             self.mainwindowcolordropdown.setStyleSheet("color: black; background-color: white")
 
+        if text == 'dark':
+            settings.colorthemetext = 'white'
+            settings.colorthemebackground = 'black'
+        if text == 'gray':
+            settings.colorthemetext = 'black'
+            settings.colorthemebackground = 'gray'
+        if text == 'light':
+            settings.colorthemetext = 'black'
+            settings.colorthemebackground = 'white'
+
     def update_textsize(self, text):
         settings.textsize = text
+        if text == 'medium':
+            settings.textsizenum = 55
+        if text == 'small':
+            settings.textsizenum = 15
+        if text == 'large':
+            settings.textsizenum = 75
 
     def update_mainwindowbackground(self, text):
         settings.mainwindowcolor = text
