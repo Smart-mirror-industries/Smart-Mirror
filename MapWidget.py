@@ -24,7 +24,7 @@ class MapWidget(QOpenGLWidget):
         self.loadPage()
 
         #add webEngineView to Layout
-        vbox.addWidget(self.webEngineView)
+        #vbox.addWidget(self.webEngineView)
         
         #set size and show
         self.setLayout(vbox)

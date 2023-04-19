@@ -55,3 +55,15 @@ class StockScroller(QGraphicsView):
             rect.moveLeft(2000)
             self.anms[i].setEndValue(rect)
             self.anms[i].start()
+
+        # Call resetPosition after animations have completed
+        self.timer.singleShot(10000, self.resetPosition)
+
+    def resetPosition(self):
+        for obj in self.objs:
+            obj.move(0, 0)
+if __name__ == '__main__':
+    app = QApplication([])
+    window = StockScroller()
+    window.show()
+    app.exec()

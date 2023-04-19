@@ -14,7 +14,7 @@ class TimeWidget(QLabel):
         # makes a timer to update the time every second
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.showTime) #connects the timer to the showTime def (function)
-        self.timer.start(1000) # 1000ms = 1 second
+        self.timer.start(60000) # 1000ms = 1 second
         self.showTime() # runs showTime initially to get rid of delay at program start
 
         # checks the colortheme and the textsize and selects the matching Style Sheet
