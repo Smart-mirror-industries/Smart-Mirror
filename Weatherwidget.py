@@ -22,7 +22,7 @@ class weatherwidget(QLabel):
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.Showreport) #connects the timer to the showTime def (function)
         self.timer.start(43200000) # 43200000 = 12 hours, Definetly shouldn't be abusing any API with this.
-        self.Showreport() # runs showTime initially to get rid of delay at program start
+        #self.Showreport() # runs showTime initially to get rid of delay at program start
 
     # function that "re-draws" the widget so it displays every 12 hours
     def Showreport(self):

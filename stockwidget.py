@@ -4,6 +4,7 @@ from yahooquery import Ticker as yf
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
+from threading import Thread
 #import threading
 #import time
 #Assign Stocks of choice (Currently hardcoded)
@@ -62,15 +63,17 @@ class StockWidget(QLabel):
         
         self.move(-500,0)           
     
-
     def updateStock(self):
+        Thread(target=self.fetchStockPrice).start()
+        
+    def fetchStockPrice(self):
         global oldprice
         yf_info = yf(self.getticker())     
         #Put data into dataframe
         data_formatted = pd.json_normalize(yf_info.financial_data)
         #self.oldtext = 
         self.setText(str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))) 
-        self.update()
+        #self.update()
         #self.setIndent(self.getx())
         if data_formatted[self.getticker() + '.currentPrice'].iloc[-1]>oldprice:
             
@@ -79,7 +82,5 @@ class StockWidget(QLabel):
             self.setStyleSheet("font: 25pt Arial; color: red; background-color: rgba(255, 255, 255, 0)")
         #print(oldprice)
         #print("OLDPRICE^")
-
-
         oldprice = data_formatted[self.getticker() + '.currentPrice'].iloc[-1]
     

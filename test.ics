@@ -1101,10 +1101,23 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230418T210000Z
+DTSTAMP:20230419T211500Z
+UID:event-assignment-3082799
+DTSTART:20230419T211500Z
+DTEND:20230419T211500Z
+CLASS:PUBLIC
+DESCRIPTION:
+SEQUENCE:0
+SUMMARY:Lab 10 [EE 224]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
+ nth=04&year=2023#assignment_3082799
+X-ALT-DESC;FMTTYPE=text/html:
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230419T205600Z
 UID:event-assignment-3138055
-DTSTART:20230419T210000Z
-DTEND:20230419T210000Z
+DTSTART:20230420T000000Z
+DTEND:20230420T000000Z
 CLASS:PUBLIC
 DESCRIPTION:Some questions have single choice answers and others have multi
  ple choice answers in which more than one answer might or might not be cor
@@ -1139,19 +1152,6 @@ X-ALT-DESC;FMTTYPE=text/html:<p><strong><span>Some questions have single ch
  >Good luck :)</p><script src="https://instructure-uploads.s3.amazonaws.com
  /account_23860000000000001/attachments/26765423/canvas_global_app.js"></sc
  ript>
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20230331T162000Z
-UID:event-assignment-3082799
-DTSTART:20230419T211500Z
-DTEND:20230419T211500Z
-CLASS:PUBLIC
-DESCRIPTION:
-SEQUENCE:0
-SUMMARY:Lab 10 [EE 224]
-URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
- nth=04&year=2023#assignment_3082799
-X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230413T192300Z

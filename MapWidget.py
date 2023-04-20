@@ -27,7 +27,7 @@ class MapWidget(QOpenGLWidget):
         
         #set size and show
         self.setLayout(vbox)
-        #self.setGeometry(300, 300, 350, 250)
+        self.setGeometry(300, 300, 350, 250)
         self.show()
 
     def loadPage(self):
