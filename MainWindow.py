@@ -10,6 +10,7 @@ from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
 from MapWidget import MapWidget
 from ThemeWidget import ThemeWidget
+from CalendarWidget import CalendarWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -45,6 +46,10 @@ class MainWindow(QMainWindow):
         self.map_widget = MapWidget(self)
         self.map_widget.move(800,50)
         self.map_widget.setMinimumSize(500, 500)
+
+        self.calendar_widget = CalendarWidget(self)
+        self.calendar_widget.move(500,500)
+        self.calendar_widget.setMinimumSize(500, 500)
 
     def toggle_ThemeSelector(self):
         if settings.themewindowswitcher == 1:

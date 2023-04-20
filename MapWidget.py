@@ -3,7 +3,7 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtOpenGLWidgets import QOpenGLWidget
-
+from PyQt6.QtCore import Qt
 
 
 class MapWidget(QOpenGLWidget):

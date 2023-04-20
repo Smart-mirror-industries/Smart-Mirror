@@ -44,7 +44,7 @@ class CalendarWidget(QWidget):
             events = (calendarDates[self.getDate()])
         #except: 
         #    print("error")
-        self.label.setText(events[1])
+        self.label.setText(events[0])
 
     def setCalendar(self):
         global calendarDates
