@@ -53,7 +53,7 @@ class StockWidget(QLabel):
 
 
         # sets the font size, font, and color (dont have to set background color because it is transparent, it matches the mainwindow color)
-        self.setStyleSheet("font: 25pt Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(settings.colorthemetext))
+#        self.setStyleSheet("font: 25pt Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(settings.colorthemetext))
 
         # sets the size of the label so all the text can be seen
         self.setGeometry(0,0,1740,40) # Slowly increase until all text is visible
@@ -61,13 +61,7 @@ class StockWidget(QLabel):
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
         
-        self.move(-500,0)           
-
-        # makes a timer to update the theme every second
-        self.timer = QTimer(self) # makes a timer
-        self.timer.timeout.connect(self.updateTheme) #connects the timer to the updateTheme def (function)
-        self.timer.start(1000) # 1000ms = 1 second
-        self.updateTheme() # runs updateTheme initially to get rid of delay at program start
+        self.move(-500,0)
     
     def updateStock(self):
         Thread(target=self.fetchStockPrice).start()
