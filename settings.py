@@ -6,12 +6,21 @@ def init():
 
     global colortheme #theme for text color and background color
     colortheme = 'dark' #themes include: 'light', 'dark', 'gray' 
+    global colorthemetext #variable for what the current theme's font color is
+    colorthemetext = 'white' #dark theme = white text, gray theme & dark theme = black text
+    global colorthemebackground #variable for what the current theme's background color is
+    colorthemebackground = 'black' #dark theme = black, gray theme = gray, light theme = white
 
     global textsize #theme for text size
     textsize = 'medium' #sizes include: 'small', 'medium', 'large'
+    global textsizenum #theme for text size 15=small, 55=medium, 75=large
+    textsizenum = 55 #set default to medium
 
-    # global mainwindowcolor #background color for the mainwindow
-    # mainwindowcolor = 'dark' 
+    global mainwindowcolor #background color for the mainwindow include: 'black', 'gray', white'
+    mainwindowcolor = 'black' 
+
+    global themewindowswitcher #switcher for theme window selector, 0 is currently hidden 1 is currently visible
+    themewindowswitcher = 1
 
 
 
