@@ -778,7 +778,7 @@ URL:https://erau.instructure.com/calendar?include_contexts=course_154266&mo
  nth=04&year=2023#assignment_3135758
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230331T161800Z
+DTSTAMP:20230420T033600Z
 UID:event-assignment-3082797
 DTSTART:20230412T211500Z
 DTEND:20230412T211500Z
@@ -1101,7 +1101,7 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  "></script>
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20230419T211500Z
+DTSTAMP:20230420T032000Z
 UID:event-assignment-3082799
 DTSTART:20230419T211500Z
 DTEND:20230419T211500Z
@@ -1177,6 +1177,18 @@ SEQUENCE:0
 SUMMARY:Quiz 6 [EE 223]
 URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
  nth=04&year=2023#assignment_3065528
+X-ALT-DESC;FMTTYPE=text/html:
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230420T190000Z
+UID:event-assignment-3065529
+DTSTART;VALUE=DATE;VALUE=DATE:20230420
+CLASS:PUBLIC
+DESCRIPTION:
+SEQUENCE:0
+SUMMARY:Quiz 7 [EE 223]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
+ nth=04&year=2023#assignment_3065529
 X-ALT-DESC;FMTTYPE=text/html:
 END:VEVENT
 BEGIN:VEVENT
@@ -1474,6 +1486,20 @@ X-ALT-DESC;FMTTYPE=text/html:<div class="description user_content teacher-v
  out.</span></p>\n</div><script src="https://instructure-uploads.s3.amazona
  ws.com/account_23860000000000001/attachments/26765423/canvas_global_app.js
  "></script>
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230420T190000Z
+UID:event-assignment-3065512
+DTSTART;VALUE=DATE;VALUE=DATE:20230425
+CLASS:PUBLIC
+DESCRIPTION:P5.13\, P5.71\, P5.77\, P5.79\, P5.83
+SEQUENCE:0
+SUMMARY:HW 11 [EE 223]
+URL:https://erau.instructure.com/calendar?include_contexts=course_154265&mo
+ nth=04&year=2023#assignment_3065512
+X-ALT-DESC;FMTTYPE=text/html:<p>P5.13\, P5.71\, P5.77\, P5.79\, P5.83</p><s
+ cript src="https://instructure-uploads.s3.amazonaws.com/account_2386000000
+ 0000001/attachments/26765423/canvas_global_app.js"></script>
 END:VEVENT
 BEGIN:VEVENT
 DTSTAMP:20230417T214200Z
