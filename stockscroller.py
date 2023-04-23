@@ -40,6 +40,7 @@ class StockScroller(QGraphicsView):
             #offset += (rect * 2 + 100)
             offset+=rect
             print(offset)
+        self.setMouseTracking(True)
 
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.updateStocks)
@@ -64,7 +65,7 @@ class StockScroller(QGraphicsView):
             self.anms[i].setEndValue(rect)
             self.anms[i].setLoopCount(-1)
             #loop = QEventLoop()
-            QTimer.singleShot(i*2000+1000*isOne, lambda i=i: self.anms[i].start())
+            QTimer.singleShot(i*2000+2000*isOne, lambda i=i: self.anms[i].start())
             #QTimer.singleShot(200, loop.quit)
             #loop.exec()
     # Call resetPosition after animations have completed
@@ -76,11 +77,11 @@ class StockScroller(QGraphicsView):
             #print(self.anms[i].currentValue().x())
             #if(self.anms[i].currentValue().x()==0):
             self.objs[i].updateStock()
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
 
-        
-
-if __name__ == '__main__':
-    app = QApplication([])
-    window = StockScroller()
-    window.show()
-    app.exec()
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())

@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
-from PyQt6.QtCore import QTimer
+from PyQt6.QtCore import QTimer, Qt
 from Calendar import Ui_Form
 
 import requests
@@ -25,6 +25,8 @@ class CalendarWidget(QWidget):
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
         layout.addWidget(self.ui.calendarWidget)
+        self.setMouseTracking(True)
+
         self.move(800,800)
         self.timer = QTimer(self) # makes a timer
         self.timer.timeout.connect(self.getCalendarEvents) #connects the timer to the showTime def (function)
@@ -69,17 +71,6 @@ class CalendarWidget(QWidget):
                 calendarDates[formattedEnd] = []
             
             calendarDates[formattedEnd].append(eventName)
-            #print("Event '{}' end {}".format(event.name, ))
-        #for date in calendarDates:
-         #   print(calendarDates[date])
-        #with open("test.ics",'wb') as f:
-        
-            # Saving received content as a png file in
-            # binary format
-            # write the contents of the response (r.content)
-            # to a new file in binary mode.
-        #    f.write(r.content)
-        #    print("test")
 
     def getDate(self):
         #Get current selected date from calendar
@@ -97,3 +88,12 @@ class CalendarWidget(QWidget):
         #print(formattedDate)
         #print(selectedDate)
         return formattedDate
+    
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())

@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
 
         self.calendar_widget = CalendarWidget(self)
         self.calendar_widget.move(500,500)
-        self.calendar_widget.setMinimumSize(500, 500)
+        self.calendar_widget.setMinimumSize(500, 300)
 
     def toggle_ThemeSelector(self):
         if settings.themewindowswitcher == 1:
