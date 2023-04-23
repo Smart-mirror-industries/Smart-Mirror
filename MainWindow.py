@@ -10,7 +10,11 @@ from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
 from MapWidget import MapWidget
 from ThemeWidget import ThemeWidget
+
+from CalendarWidget import CalendarWidget
+
 from ScreenClutterWidget import ScreenClutterWidget
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -46,11 +50,17 @@ class MainWindow(QMainWindow):
         self.map_widget.move(800,50)
         self.map_widget.setMinimumSize(500, 500)
 
+
+        self.calendar_widget = CalendarWidget(self)
+        self.calendar_widget.move(500,500)
+        self.calendar_widget.setMinimumSize(500, 300)
+
         # makes a timer to refresh the mainwindow screen with updates
         self.updateMainWindowColorAndThemeButtonColortimer = QTimer(self) # makes a timer
         self.updateMainWindowColorAndThemeButtonColortimer.timeout.connect(self.screenRefresh) #connects the timer to the screenRefresh def (function)
         self.updateMainWindowColorAndThemeButtonColortimer.start(1000) # 1000ms = 1 second
         self.screenRefresh() # runs screenRefresh initially to get rid of delay at program start
+
 
     def toggle_ThemeSelector(self):
         if settings.themewindowswitcher == 1:

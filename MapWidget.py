@@ -2,11 +2,11 @@
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6.QtWebEngineWidgets import QWebEngineView
+from PyQt6.QtOpenGLWidgets import QOpenGLWidget
 from PyQt6.QtCore import Qt
 
 
-
-class MapWidget(QWidget):
+class MapWidget(QOpenGLWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -27,7 +27,7 @@ class MapWidget(QWidget):
         
         #set size and show
         self.setLayout(vbox)
-        #self.setGeometry(300, 300, 350, 250)
+        self.setGeometry(300, 300, 350, 250)
         self.show()
         self.setMouseTracking(True)
 
