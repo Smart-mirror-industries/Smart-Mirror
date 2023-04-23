@@ -7,7 +7,7 @@ import settings
 # import custom subclasses
 from timewidget import TimeWidget
 from stockscroller import StockScroller
-from Weatherwidget import weatherwidget
+#from Weatherwidget import weatherwidget
 from MapWidget import MapWidget
 from ThemeWidget import ThemeWidget
 from ScreenClutterWidget import ScreenClutterWidget
@@ -37,8 +37,8 @@ class MainWindow(QMainWindow):
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)
 
-        self.weather_widget = weatherwidget(self)
-        self.weather_widget.move(75,200)
+        #self.weather_widget = weatherwidget(self)
+        #self.weather_widget.move(75,200)
         
         self.stock_scroller.move(-200, 50)
 
@@ -68,9 +68,9 @@ class MainWindow(QMainWindow):
         if settings.timewidgetVisibility == 1:
             self.time_widget.show()
         else: self.time_widget.hide()
-        if settings.weatherwidgetVisibility == 1:
-            self.weather_widget.show()
-        else: self.weather_widget.hide()
+        #if settings.weatherwidgetVisibility == 1:
+            #self.weather_widget.show()
+        #else: self.weather_widget.hide()
         if settings.stockwidgetVisibility == 1:
             self.stock_scroller.show()
         else: self.stock_scroller.hide()
