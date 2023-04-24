@@ -4,22 +4,24 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QVB
 from PyQt6.QtGui import QMouseEvent
 import settings
 
+
 # import custom subclasses
 from timewidget import TimeWidget
 from stockscroller import StockScroller
 from Weatherwidget import weatherwidget
 from MapWidget import MapWidget
 from ThemeWidget import ThemeWidget
-
 from CalendarWidget import CalendarWidget
-
 from ScreenClutterWidget import ScreenClutterWidget
+from Reminderwidget import reminderwidget
+
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('Smart Mirror')
+
+
         self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
 
         self.showhideThemesButton = QPushButton('Toggle Theme Selector', self)
@@ -46,10 +48,15 @@ class MainWindow(QMainWindow):
         
         self.stock_scroller.move(-200, 50)
 
+
         self.map_widget = MapWidget(self)
         self.map_widget.move(800,50)
         self.map_widget.setMinimumSize(500, 500)
 
+
+        self.reminderwidget = reminderwidget(self)
+        self.reminderwidget.move(75,200)
+        self.reminderwidget.setMinimumSize(200,200)
 
         self.calendar_widget = CalendarWidget(self)
         self.calendar_widget.move(500,500)
@@ -61,6 +68,37 @@ class MainWindow(QMainWindow):
         self.updateMainWindowColorAndThemeButtonColortimer.start(1000) # 1000ms = 1 second
         self.screenRefresh() # runs screenRefresh initially to get rid of delay at program start
 
+
+    def toggle_ThemeSelector(self):
+        if settings.themewindowswitcher == 1:
+            self.theme_widget.hide()
+            self.screenclutter_widget.hide()
+            settings.themewindowswitcher = 0
+        elif settings.themewindowswitcher == 0:
+            self.theme_widget.show()
+            self.screenclutter_widget.show()
+            settings.themewindowswitcher = 1
+
+    def screenRefresh(self):
+        self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
+        self.showhideThemesButton.setStyleSheet("font: 15pt Arial;color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+        if settings.timewidgetVisibility == 1:
+            self.time_widget.show()
+        else: self.time_widget.hide()
+        if settings.weatherwidgetVisibility == 1:
+            self.weather_widget.show()
+        else: self.weather_widget.hide()
+        if settings.stockwidgetVisibility == 1:
+            self.stock_scroller.show()
+        else: self.stock_scroller.hide()
+        if settings.mapwidgetVisibility == 1:
+            self.map_widget.show()
+        else: self.map_widget.hide()
+        # if settings.calenderwidgetVisibility == 1:
+        #     self.calenderwidgetVisibility.show()
+        # else: self.calenderwidgetVisibility.hide()
+
+        
 
     def toggle_ThemeSelector(self):
         if settings.themewindowswitcher == 1:
