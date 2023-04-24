@@ -15,6 +15,9 @@ class reminderwidget(QWidget):
         self.add_button.clicked.connect(self.add_textbox)
         self.delete_button.clicked.connect(self.delete_textbox)
 
+        self.delete_button.setStyleSheet("background-color: white;")
+        self.add_button.setStyleSheet("background-color: white;")
+
         self.vbox1 = QVBoxLayout() #Holder for the text
         vbox2 = QVBoxLayout() #To stack both of these into each other?
 
@@ -26,6 +29,7 @@ class reminderwidget(QWidget):
         vbox2.addLayout(hbox1)#holds the buttons
         vbox2.addLayout(self.vbox1)#holds the text
 
+       
         
 
         self.setLayout(vbox2)
@@ -58,10 +62,19 @@ class reminderwidget(QWidget):
     def add_textbox(self):#this creates text boxes
         # Create a new QLineEdit widget
         textbox = QLineEdit()
-        
+        textbox.setStyleSheet("background-color: white;")
         # Add the text box to the layout
         self.vbox1.addWidget(textbox)
         
     def delete_textbox(self):
         if self.vbox1.count() > 0:
             self.vbox1.takeAt(self.vbox1.count() - 1).widget().deleteLater()
+    
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())
