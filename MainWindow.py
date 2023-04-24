@@ -38,28 +38,30 @@ class MainWindow(QMainWindow):
         self.theme_widget.setMinimumSize(200, 200)
 
         self.time_widget = TimeWidget(self)
-        self.time_widget.move(450, 100)
+        self.time_widget.move(650, 100)
 
         #self.stock_scroller = StockScroller(self)
         #self.stock_scroller.setMinimumSize(3000, 50)
 
-        #self.weather_widget = weatherwidget(self)
-        #self.weather_widget.move(75,200)
+
+        self.weather_widget = weatherwidget(self)
+        self.weather_widget.move(0,100)
+
         
         #self.stock_scroller.move(-200, 50)
 
 
         self.map_widget = MapWidget(self)
-        self.map_widget.move(800,50)
+        self.map_widget.move(1050,100)
         self.map_widget.setMinimumSize(500, 500)
 
 
         self.reminderwidget = reminderwidget(self)
-        self.reminderwidget.move(75,200)
+        self.reminderwidget.move(300,75)
         self.reminderwidget.setMinimumSize(200,200)
 
         self.calendar_widget = CalendarWidget(self)
-        self.calendar_widget.move(500,500)
+        self.calendar_widget.move(250,600)
         self.calendar_widget.setMinimumSize(500, 300)
 
         # makes a timer to refresh the mainwindow screen with updates
@@ -94,40 +96,11 @@ class MainWindow(QMainWindow):
         if settings.mapwidgetVisibility == 1:
             self.map_widget.show()
         else: self.map_widget.hide()
-        # if settings.calenderwidgetVisibility == 1:
-        #     self.calenderwidgetVisibility.show()
-        # else: self.calenderwidgetVisibility.hide()
+        if settings.calenderwidgetVisibility == 1:
+            self.calendar_widget.show()
+        else: self.calendar_widget.hide()
+        if settings.reminderwidgetVisibility == 1:
+            self.reminderwidget.show()
+        else: self.reminderwidget.hide()
 
         
-
-    def toggle_ThemeSelector(self):
-        if settings.themewindowswitcher == 1:
-            self.theme_widget.hide()
-            self.screenclutter_widget.hide()
-            settings.themewindowswitcher = 0
-        elif settings.themewindowswitcher == 0:
-            self.theme_widget.show()
-            self.screenclutter_widget.show()
-            settings.themewindowswitcher = 1
-
-    def screenRefresh(self):
-        self.setStyleSheet("background-color: {};".format(settings.mainwindowcolor))
-        self.showhideThemesButton.setStyleSheet("font: 15pt Arial;color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
-        if settings.timewidgetVisibility == 1:
-            self.time_widget.show()
-        else: self.time_widget.hide()
-        #if settings.weatherwidgetVisibility == 1:
-            #self.weather_widget.show()
-        #else: self.weather_widget.hide()
-        #if settings.stockwidgetVisibility == 1:
-            #self.stock_scroller.show()
-        #else: self.stock_scroller.hide()
-        if settings.mapwidgetVisibility == 1:
-            self.map_widget.show()
-        else: self.map_widget.hide()
-        # if settings.calenderwidgetVisibility == 1:
-        #     self.calenderwidgetVisibility.show()
-        # else: self.calenderwidgetVisibility.hide()
-
-        
-

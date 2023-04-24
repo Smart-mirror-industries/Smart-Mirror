@@ -6,6 +6,7 @@ import requests
 from ics import Calendar, Event
 import pandas as pd
 
+import settings
 class CalendarWidget(QWidget):
     global calendarDates
     def __init__(self, parent=None):
@@ -32,12 +33,22 @@ class CalendarWidget(QWidget):
         self.timer.timeout.connect(self.getCalendarEvents) #connects the timer to the showTime def (function)
         self.timer.start(1000) # update every 8 ms = 120Hz
         #self.getCalendarEvents() # runs showTime initially to get rid of delay at program start
+
+        self.timer2 = QTimer(self) # makes a timer
+        self.timer2.timeout.connect(self.updateTheme) #connects the timer to the showTime def (function)
+        self.timer2.start(1000) # update every 8 ms = 120Hz
+        self.updateTheme() # runs showTime initially to get rid of delay at program start
+
+    def updateTheme(self):
+        self.ui.calendarWidget.setStyleSheet("font: 15pt Arial; color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+        # self.label.setStyleSheet("font: 25pt Arial: color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+
     def addLabel(self):
         self.label = QLabel(self)
         self.label.setText('test')
-        self.setStyleSheet("color: white;")
+        self.setStyleSheet("color: {};".format(settings.colorthemetext))
 
-        self.label.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
+        self.label.setStyleSheet("font: 15pt Arial; color: {}; background-color: rgba(255, 255, 255, 0);".format(settings.colorthemetext))
 
     def getCalendarEvents(self):
         
@@ -47,6 +58,7 @@ class CalendarWidget(QWidget):
         #except: 
         #    print("error")
         self.label.setText(events[0])
+        
 
     def setCalendar(self):
         global calendarDates

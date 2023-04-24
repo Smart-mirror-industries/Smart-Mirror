@@ -39,5 +39,8 @@ def init():
     global calenderwidgetVisibility
     calenderwidgetVisibility = 1
 
+    global reminderwidgetVisibility
+    reminderwidgetVisibility = 1
+
 
 

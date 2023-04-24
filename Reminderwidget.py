@@ -58,6 +58,8 @@ class reminderwidget(QWidget):
         #self.setLayout(self.textbox_layout)
         #self.layout().addLayout(self.button_layout)
 
+        self.setMouseTracking(True)
+
         
     def add_textbox(self):#this creates text boxes
         # Create a new QLineEdit widget
