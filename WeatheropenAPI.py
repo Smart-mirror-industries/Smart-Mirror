@@ -17,9 +17,9 @@ def Latlon(zpcode): #Why in the everloving EARTH do I have to define it like thi
     return lat, lon
 
 #Now for the weather, maybe eventually
-def weathergrab(weather, set):
+def weathergrab(lat, lon, set):
     #bazinga
-    
+    weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
    #call complete ring ring ring
     response = requests.get(weather)
     data = response.json()
@@ -30,18 +30,16 @@ def weathergrab(weather, set):
     descrip = data['daily'][set]['weather'][0]['main']  #found the issue, '0' around that one 0 is what was doing it.  Making it think it was an integer
     return readdate1, low1, high1, descrip
     
-zipcode = '32114'
+zipcode = '32931'
 #zipcode = input("Input your zipcode: " ) #I didn't know you could shorthand this
 
 lat, lon = Latlon(zipcode)
 
 print(f"Lat: {lat}, Lon: {lon}")
 
-weather = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=imperial&exclude=hourly,alerts,minutely&appid=dbfe113373f8e233af2191ce8daf6a90"
-
-date1, low1, high1, descrip1 = weathergrab(weather, 0) #Today's weather, date of today, high and low
-date2, low2, high2, descrip2 = weathergrab(weather, 1) #Tomorrow's weather, date of course, high and low
-date3, low3, high3, descrip3 = weathergrab(weather, 2) #The day after tomorrow, ditto as above
+date1, low1, high1, descrip1 = weathergrab(lat, lon, 0) #Today's weather, date of today, high and low
+date2, low2, high2, descrip2 = weathergrab(lat, lon, 1) #Tomorrow's weather, date of course, high and low
+date3, low3, high3, descrip3 = weathergrab(lat, lon, 2) #The day after tomorrow, ditto as above
 
 print(f"Date: {date1}, Low: {low1} High: {high1}, Description: {descrip1}")
 

@@ -1,4 +1,4 @@
-from PyQt6.QtCore import QDateTime, QTimer, Qt
+from PyQt6.QtCore import QDateTime, QTimer, Qt, QPoint
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
 import settings
@@ -17,47 +17,32 @@ class TimeWidget(QLabel):
         self.timer.start(1000) # 1000ms = 1 second
         self.showTime() # runs showTime initially to get rid of delay at program start
 
-        # checks the colortheme and the textsize and selects the matching Style Sheet
-        # also sets the size of the widget based on the texstize
-        if settings.colortheme == 'dark':
-            if settings.textsize == 'large':
-                self.setStyleSheet("font: 45pt Arial; color: white; background-color: black")
-                self.setMinimumSize(750, 45)
-            elif settings.textsize == 'medium':
-                self.setStyleSheet("font: 25pt Arial; color: white; background-color: black")
-                self.setMinimumSize(450, 25)
-            elif settings.textsize == 'small':
-                self.setStyleSheet("font: 10pt Arial; color: white; background-color: black")
-                self.setMinimumSize(200, 10) 
-        elif settings.colortheme == 'light':
-            if settings.textsize == 'large':
-                self.setStyleSheet("font: 45pt Arial; color: black; background-color: white")
-                self.setMinimumSize(750, 45)
-            elif settings.textsize == 'medium':
-                self.setStyleSheet("font: 25pt Arial; color: black; background-color: white")
-                self.setMinimumSize(450, 25)
-            elif settings.textsize == 'small':
-                self.setStyleSheet("font: 10pt Arial; color: black; background-color: white")
-                self.setMinimumSize(200, 10) 
-        elif settings.colortheme == 'gray':
-            if settings.textsize == 'large':
-                self.setStyleSheet("font: 45pt Arial; color: black; background-color: gray")
-                self.setMinimumSize(750, 45)
-            elif settings.textsize == 'medium':
-                self.setStyleSheet("font: 25pt Arial; color: black; background-color: gray")
-                self.setMinimumSize(450, 25)
-            elif settings.textsize == 'small':
-                self.setStyleSheet("font: 10pt Arial; color: black; background-color: gray")
-                self.setMinimumSize(200, 10) 
-        else: print("Error with timewidget stylesheet - check the global variables in settings.py")
         
-            
-
+        self.setMouseTracking(True)
 
     # function that "re-draws" the widget so it displays the time every new second
     def showTime(self):
         dateTime = QDateTime.currentDateTime()
-        # text = dateTime.toString('MMMM d, yyyy - hh:mm:ss') # time widget with seconds
-        text = dateTime.toString('MMMM d, yyyy - hh:mm') # time widget without seconds
+       
+        time_text = f"<span style='font-size: {settings.textsizenum}px'>{dateTime.toString('hh:mm')}</span>"
+        date_text = f"<span style='font-size: {settings.textsizenum/2.25}px'>{dateTime.toString('MMMM d, yyyy')}</span>"
+        text = f"<center>{time_text}<br>{date_text}</center>"
+
+        self.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
         self.setText(text)
 
+        if settings.textsize == 'large':
+            self.setFixedSize(225, 130)
+        elif settings.textsize == 'medium':
+            self.setFixedSize(150,100)
+        elif settings.textsize == 'small':
+            self.setFixedSize(100,50)
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())

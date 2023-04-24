@@ -18,6 +18,7 @@ class weatherwidget(QLabel):
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignCenter) #if the MinSize is too big, the text position will not match the move command
                                                         #because it will be centering the text to the middle of the large label
+        self.setMouseTracking(True)
 
         # makes a timer to update the time every second
         self.timer = QTimer(self) # makes a timer
@@ -85,3 +86,11 @@ class weatherwidget(QLabel):
         lon = data[0]['lon']
         return lat, lon
         
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.drag_start_position = event.pos()
+
+    def mouseMoveEvent(self, event):
+        if event.buttons() & Qt.MouseButton.LeftButton:
+            drag_distance = event.pos() - self.drag_start_position
+            self.move(self.x() + drag_distance.x(), self.y() + drag_distance.y())

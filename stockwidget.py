@@ -4,6 +4,7 @@ from yahooquery import Ticker as yf
 from PyQt6.QtCore import QDateTime, QTimer, Qt
 from PyQt6.QtGui import QPalette, QColor
 from PyQt6.QtWidgets import QLabel
+from threading import Thread
 #import threading
 #import time
 #Assign Stocks of choice (Currently hardcoded)
@@ -18,8 +19,8 @@ from PyQt6.QtWidgets import QLabel
 #global xpos
 #xpos = 0
 
-#global oldtext
-#oldtext = 'test'
+global oldprice
+oldprice = 0
 
 # This class uses the label widget of PyQt6
 class StockWidget(QLabel):
@@ -51,28 +52,35 @@ class StockWidget(QLabel):
         #print(str(self.getticker() + "AAAAA: " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1])))
 
 
-        # sets the font size, font, and color (** must be white to show on black mainwindow **)
-        self.setStyleSheet("font: 25pt Arial; color: white; background-color: rgba(255, 255, 255, 0)")
+        # sets the font size, font, and color (dont have to set background color because it is transparent, it matches the mainwindow color)
+#        self.setStyleSheet("font: 25pt Arial; color: {}; background-color: rgba(255, 255, 255, 0)".format(settings.colorthemetext))
 
         # sets the size of the label so all the text can be seen
-        self.setMinimumSize(3000, 100) # Slowly increase until all text is visible
+        self.setGeometry(0,0,1740,40) # Slowly increase until all text is visible
         
         # aligns the text to be in the center of the label
         self.setAlignment(Qt.AlignmentFlag.AlignLeft) #if the MinSize is too big, the text position will not match the move command
         
-        self.move(-500,0)           
+        self.move(-500,0)
     
-
     def updateStock(self):
+        Thread(target=self.fetchStockPrice).start()
         
-        #global oldtext
-
-        
+    def fetchStockPrice(self):
+        global oldprice
         yf_info = yf(self.getticker())     
         #Put data into dataframe
         data_formatted = pd.json_normalize(yf_info.financial_data)
         #self.oldtext = 
         self.setText(str(self.getticker() + ": " + str(data_formatted[self.getticker() + '.currentPrice'].iloc[-1]))) 
-        self.update()
+        #self.update()
         #self.setIndent(self.getx())
+        if data_formatted[self.getticker() + '.currentPrice'].iloc[-1]>oldprice:
+            
+            self.setStyleSheet("font: 25pt Arial; color: green; background-color: rgba(255, 255, 255, 0)")
+        else:
+            self.setStyleSheet("font: 25pt Arial; color: red; background-color: rgba(255, 255, 255, 0)")
+        #print(oldprice)
+        #print("OLDPRICE^")
+        oldprice = data_formatted[self.getticker() + '.currentPrice'].iloc[-1]
     
