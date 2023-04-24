@@ -19,6 +19,8 @@ class ScreenClutterWidget(QWidget):
         self.checkbox4 = QCheckBox()
         self.label5 = QLabel('Calender Widget Visibility')
         self.checkbox5 = QCheckBox()
+        self.label6 = QLabel('Reminder Widget Visibility')
+        self.checkbox6 = QCheckBox()
 
         # Create layout for labels and checkboxes
         hbox1 = QHBoxLayout()
@@ -36,12 +38,16 @@ class ScreenClutterWidget(QWidget):
         hbox5 = QHBoxLayout()
         hbox5.addWidget(self.label5)
         hbox5.addWidget(self.checkbox5)
+        hbox6 = QHBoxLayout()
+        hbox6.addWidget(self.label6)
+        hbox6.addWidget(self.checkbox6)
         vbox = QVBoxLayout()
         vbox.addLayout(hbox1)
         vbox.addLayout(hbox2)
         vbox.addLayout(hbox3)
         vbox.addLayout(hbox4)
         vbox.addLayout(hbox5)
+        vbox.addLayout(hbox6)
 
         # Set the font color of the text labels to match the theme
         self.label1.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
@@ -49,6 +55,7 @@ class ScreenClutterWidget(QWidget):
         self.label3.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
         self.label4.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
         self.label5.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+        self.label6.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
         self.setStyleSheet("background-color: {};".format(settings.colorthemebackground))
 
         # Set the layout for the widget
@@ -57,6 +64,7 @@ class ScreenClutterWidget(QWidget):
         hbox3.setAlignment(Qt.AlignmentFlag.AlignRight)
         hbox4.setAlignment(Qt.AlignmentFlag.AlignRight)
         hbox5.setAlignment(Qt.AlignmentFlag.AlignRight)
+        hbox6.setAlignment(Qt.AlignmentFlag.AlignRight)
         vbox.setAlignment(Qt.AlignmentFlag.AlignRight)
         self.setLayout(vbox)
 
@@ -65,13 +73,15 @@ class ScreenClutterWidget(QWidget):
         self.checkbox3.setCheckState(Qt.CheckState.Checked)
         self.checkbox4.setCheckState(Qt.CheckState.Checked)
         self.checkbox5.setCheckState(Qt.CheckState.Checked)
+        self.checkbox6.setCheckState(Qt.CheckState.Checked)
 
         # Connect checkbox signals to update global variables
         self.checkbox1.stateChanged.connect(lambda state, var=settings.timewidgetVisibility: setattr(settings, 'timewidgetVisibility', int(state == 2)))
-        self.checkbox2.stateChanged.connect(lambda state, var=settings.timewidgetVisibility: setattr(settings, 'weatherwidgetVisibility', int(state == 2)))
-        self.checkbox3.stateChanged.connect(lambda state, var=settings.timewidgetVisibility: setattr(settings, 'mapwidgetVisibility', int(state == 2)))
-        self.checkbox4.stateChanged.connect(lambda state, var=settings.timewidgetVisibility: setattr(settings, 'stockwidgetVisibility', int(state == 2)))
-        self.checkbox5.stateChanged.connect(lambda state, var=settings.timewidgetVisibility: setattr(settings, 'calenderwidgetVisibility', int(state == 2)))
+        self.checkbox2.stateChanged.connect(lambda state, var=settings.weatherwidgetVisibility: setattr(settings, 'weatherwidgetVisibility', int(state == 2)))
+        self.checkbox3.stateChanged.connect(lambda state, var=settings.mapwidgetVisibility: setattr(settings, 'mapwidgetVisibility', int(state == 2)))
+        self.checkbox4.stateChanged.connect(lambda state, var=settings.stockwidgetVisibility: setattr(settings, 'stockwidgetVisibility', int(state == 2)))
+        self.checkbox5.stateChanged.connect(lambda state, var=settings.calenderwidgetVisibility: setattr(settings, 'calenderwidgetVisibility', int(state == 2)))
+        self.checkbox6.stateChanged.connect(lambda state, var=settings.reminderwidgetVisibility: setattr(settings, 'reminderwidgetVisibility', int(state == 2)))
         
         # makes a timer to update the theme every second
         self.timer = QTimer(self) # makes a timer
@@ -85,3 +95,4 @@ class ScreenClutterWidget(QWidget):
         self.label3.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
         self.label4.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
         self.label5.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
+        self.label6.setStyleSheet("color: {}; background-color: {};".format(settings.colorthemetext, settings.colorthemebackground))
