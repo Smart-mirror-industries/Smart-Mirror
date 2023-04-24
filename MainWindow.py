@@ -34,13 +34,13 @@ class MainWindow(QMainWindow):
         self.time_widget = TimeWidget(self)
         self.time_widget.move(450, 100)
 
-        self.stock_scroller = StockScroller(self)
-        self.stock_scroller.setMinimumSize(3000, 50)
+        #self.stock_scroller = StockScroller(self)
+        #self.stock_scroller.setMinimumSize(3000, 50)
 
         #self.weather_widget = weatherwidget(self)
         #self.weather_widget.move(75,200)
         
-        self.stock_scroller.move(-200, 50)
+        #self.stock_scroller.move(-200, 50)
 
         self.map_widget = MapWidget(self)
         self.map_widget.move(800,50)
@@ -71,9 +71,9 @@ class MainWindow(QMainWindow):
         #if settings.weatherwidgetVisibility == 1:
             #self.weather_widget.show()
         #else: self.weather_widget.hide()
-        if settings.stockwidgetVisibility == 1:
-            self.stock_scroller.show()
-        else: self.stock_scroller.hide()
+        #if settings.stockwidgetVisibility == 1:
+            #self.stock_scroller.show()
+        #else: self.stock_scroller.hide()
         if settings.mapwidgetVisibility == 1:
             self.map_widget.show()
         else: self.map_widget.hide()

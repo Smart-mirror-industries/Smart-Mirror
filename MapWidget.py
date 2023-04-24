@@ -37,7 +37,7 @@ class MapWidget(QWidget):
 
     def loadPage(self):
         with open('index.html', 'r', encoding='utf-8') as f: #this will call the maps API. DO NOT UNCOMMENT WHEN TESTING OTHER COMPONENETS
-        #with open('test.html', 'r') as f: #placeholder code
+        #with open('test.html', 'r', encoding='utf-8') as f: #placeholder code
             #read html file and load the page
             html = f.read()
             #self.view.setHtml(html, QUrl.fromLocalFile(full_path))
