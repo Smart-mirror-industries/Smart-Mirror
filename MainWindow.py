@@ -48,7 +48,7 @@ class MainWindow(QMainWindow):
 
         self.reminderwidget = reminderwidget(self)
         self.movereminderwidget(75,200)
-        self.reminderwidget.setMinimumSize(400,400)
+        self.reminderwidget.setMinimumSize(0,200)
 
         #Create the x widget and add it to the main window
         

@@ -23,12 +23,13 @@ class reminderwidget(QWidget):
         hbox1.addWidget(self.add_button)
         hbox1.addWidget(self.delete_button)
 
-        vbox2.addLayout(hbox1)
-        vbox2.addLayout(vbox1)
+        vbox2.addLayout(hbox1)#holds the buttons
+        vbox2.addLayout(vbox1)#holds the text
 
         
 
         self.setLayout(vbox2)
+        
 
 
         # set a layout for the boxes
