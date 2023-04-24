@@ -38,28 +38,28 @@ class MainWindow(QMainWindow):
         self.theme_widget.setMinimumSize(200, 200)
 
         self.time_widget = TimeWidget(self)
-        self.time_widget.move(450, 100)
+        self.time_widget.move(650, 100)
 
         self.stock_scroller = StockScroller(self)
         self.stock_scroller.setMinimumSize(3000, 50)
 
         self.weather_widget = weatherwidget(self)
-        self.weather_widget.move(75,200)
+        self.weather_widget.move(0,100)
         
         self.stock_scroller.move(-200, 50)
 
 
         self.map_widget = MapWidget(self)
-        self.map_widget.move(800,50)
+        self.map_widget.move(1050,100)
         self.map_widget.setMinimumSize(500, 500)
 
 
         self.reminderwidget = reminderwidget(self)
-        self.reminderwidget.move(75,200)
+        self.reminderwidget.move(300,75)
         self.reminderwidget.setMinimumSize(200,200)
 
         self.calendar_widget = CalendarWidget(self)
-        self.calendar_widget.move(500,500)
+        self.calendar_widget.move(250,600)
         self.calendar_widget.setMinimumSize(500, 300)
 
         # makes a timer to refresh the mainwindow screen with updates
