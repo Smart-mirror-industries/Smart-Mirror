@@ -8,7 +8,7 @@ import settings
 # import custom subclasses
 from timewidget import TimeWidget
 from stockscroller import StockScroller
-from Weatherwidget import weatherwidget
+#from Weatherwidget import weatherwidget
 from MapWidget import MapWidget
 from ThemeWidget import ThemeWidget
 from CalendarWidget import CalendarWidget
@@ -40,13 +40,15 @@ class MainWindow(QMainWindow):
         self.time_widget = TimeWidget(self)
         self.time_widget.move(650, 100)
 
-        self.stock_scroller = StockScroller(self)
-        self.stock_scroller.setMinimumSize(3000, 50)
+        #self.stock_scroller = StockScroller(self)
+        #self.stock_scroller.setMinimumSize(3000, 50)
+
 
         self.weather_widget = weatherwidget(self)
         self.weather_widget.move(0,100)
+
         
-        self.stock_scroller.move(-200, 50)
+        #self.stock_scroller.move(-200, 50)
 
 
         self.map_widget = MapWidget(self)
@@ -102,4 +104,3 @@ class MainWindow(QMainWindow):
         else: self.reminderwidget.hide()
 
         
-
