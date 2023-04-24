@@ -3,6 +3,8 @@ from PyQt6.QtWidgets import QApplication
 from MainWindow import MainWindow
 from time import sleep
 import settings
+import stockwidget
+import canvasintegration
 
 if __name__ == '__main__':
     settings.init()
