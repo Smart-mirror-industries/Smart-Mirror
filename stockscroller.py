@@ -55,8 +55,9 @@ class StockScroller(QGraphicsView):
         isOne = 0
         self.anms = list()
         for i in range(len(self.objs)):
-            if i==1:
+            if i>=1:
                 isOne=1
+
             rect = QRect(self.objs[i].pos(), self.objs[i].size())
             self.anms.append(QPropertyAnimation(self.objs[i], b'geometry'))
             self.anms[i].setDuration(20000)
@@ -65,7 +66,7 @@ class StockScroller(QGraphicsView):
             self.anms[i].setEndValue(rect)
             self.anms[i].setLoopCount(-1)
             #loop = QEventLoop()
-            QTimer.singleShot(i*2000+2000*isOne, lambda i=i: self.anms[i].start())
+            QTimer.singleShot(i*2000+3550*isOne, lambda i=i: self.anms[i].start())
             #QTimer.singleShot(200, loop.quit)
             #loop.exec()
     # Call resetPosition after animations have completed
