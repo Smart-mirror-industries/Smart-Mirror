@@ -15,7 +15,7 @@ class reminderwidget(QWidget):
         self.add_button.clicked.connect(self.add_textbox)
         self.delete_button.clicked.connect(self.delete_textbox)
 
-        vbox1 = QVBoxLayout() #Holder for the text
+        self.vbox1 = QVBoxLayout() #Holder for the text
         vbox2 = QVBoxLayout() #To stack both of these into each other?
 
         hbox1 = QHBoxLayout()#Holder for the buttons
@@ -24,7 +24,7 @@ class reminderwidget(QWidget):
         hbox1.addWidget(self.delete_button)
 
         vbox2.addLayout(hbox1)#holds the buttons
-        vbox2.addLayout(vbox1)#holds the text
+        vbox2.addLayout(self.vbox1)#holds the text
 
         
 
@@ -62,6 +62,6 @@ class reminderwidget(QWidget):
         # Add the text box to the layout
         self.vbox1.addWidget(textbox)
         
-    def delete_textbox(self): #removes the last created text box, if there's no boxes it crashes
-        
-        self.vbox1.takeAt(self.textbox_layout.count() - 1).widget().deleteLater()
+    def delete_textbox(self):
+        if self.vbox1.count() > 0:
+            self.vbox1.takeAt(self.vbox1.count() - 1).widget().deleteLater()

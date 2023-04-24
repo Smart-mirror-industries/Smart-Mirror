@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Makes the main window and sets the background to black
         self.setWindowTitle('Smart Mirror')
-        self.setStyleSheet("background-color: black;")
+        self.setStyleSheet("background-color: white;")
 
         # Create the time widget and add it to the main window
         self.time_widget = TimeWidget(self)
@@ -47,8 +47,8 @@ class MainWindow(QMainWindow):
         
 
         self.reminderwidget = reminderwidget(self)
-        self.movereminderwidget(75,200)
-        self.reminderwidget.setMinimumSize(0,200)
+        self.reminderwidget.move(75,200)
+        self.reminderwidget.setMinimumSize(200,200)
 
         #Create the x widget and add it to the main window
         
